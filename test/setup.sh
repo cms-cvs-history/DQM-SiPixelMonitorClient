@@ -34,8 +34,7 @@ if [ -e startMonitorClient ]; then
 fi
 
 sed -e "s/.portn/1972/g" -e "s/.host/${HOSTNAME}/g" -e "s/.pwd/${TEST_PATH}/g" -e "s/.libpath/${MWC_LIB}/g" .profile.xml > profile.xml
-sed -e "s/.portn/1972/g" -e "s/.host/${HOSTNAME}/g" -e "s/.pwd/${TEST_PATH}/g"
--e "s/.libpath/${MWC_LIB}/g" .SiPixelWebClient.xml > SiPixelWebClient.xml 
+sed -e "s/.portn/1972/g" -e "s/.host/${HOSTNAME}/g" -e "s/.pwd/${TEST_PATH}/g" -e "s/.libpath/${MWC_LIB}/g" .SiPixelWebClient.xml > SiPixelWebClient.xml 
 sed -e "s/.portn/1972/g" -e "s/.host/${HOSTNAME}/g" -e "s/.pwd/${TEST_PATH}/g" -e "s/.libpath/${MWC_LIB}/g" .startMonitorClient > startMonitorClient
 
 sed -e "s@SERVED_DIRECTORY_URL@${SERVED_DIR}@g" .WebLib.js > WebLib.js

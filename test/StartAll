@@ -1,0 +1,39 @@
+#!/bin/sh
+function usage() {
+cat <<EOF
+
+  execute the script in the following way : 
+
+  ./StartAll  RUN_TYPE
+
+  where
+    - RUN_TYPE    (DQM sources you want to activate): digi
+
+  Example 1 : ./StartAll  digi
+
+EOF
+}
+if [ $# -lt 1 ]; then
+  usage; exit 1;
+fi
+./StopAll
+COLLECTORNAME=`/bin/hostname`
+echo "The hostname is = " $COLLECTORNAME
+eval `scramv1 runtime -sh`
+xterm -T "DQM Collector" -sb -sl 100   -e DQMCollector &
+source_type=$1
+echo  $source_type
+if [ "$source_type" == "digi" ]; then
+  cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_digi.xml sipixel_qualitytest_config.xml
+  export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
+  cd  ${PRODUCER_PATH}
+  perl -pi.bak -e "s#localhost#$COLLECTORNAME#g" sipixel_dqm_source_example.cfg 
+  xterm -T "DQM Producer(Source)"  -sb -sl 30000 -e cmsRun sipixel_dqm_source_example.cfg &
+fi
+export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
+cd ${CONSUMER_PATH}
+./setup.sh $COLLECTORNAME
+./startMonitorClient 
+
+

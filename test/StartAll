@@ -2,7 +2,7 @@
 function usage() {
 cat <<EOF
 
-  Usage:
+  Usage: 
 
   ./StartAll  RUN_TYPE
 
@@ -26,10 +26,9 @@ cd ${CONSUMER_PATH}
 ./StopAll
 eval `scramv1 runtime -sh`
 COLLECTORNAME=`/bin/hostname`
-
 echo -e "$this Local host: " $COLLECTORNAME
 
-echo -e "$this Starting Collector on xterm"
+echo -e "$this Starting Collector on xterm" 
 xterm -T "DQM Collector"    \
       -sb                   \
       -bg "#f1feb6"         \
@@ -44,21 +43,21 @@ if [ "$source_type" == "digi" ]; then
   cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_digi.xml    sipixel_qualitytest_config.xml
   cd  ${PRODUCER_PATH}
-  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress =\"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg
-  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml
-  echo -e "$this Starting Producer on xterm"
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg 
+  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
+  echo -e "$this Starting Producer on xterm" 
   xterm -T "DQM Producer (Source)"               \
         -sb                                      \
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
         -geometry 80x20+520+10                   \
-        -e "cmsRun sipixel_dqm_source_example.cfg" &
+        -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
 fi
 
 cd ${CONSUMER_PATH}
 echo -e "$this ./setup.sh $COLLECTORNAME"
 ./setup.sh $COLLECTORNAME
 echo -e "$this ./startMonitorClient"
-./startMonitorClient
-echo -e "$this startup finished."
+./startMonitorClient 
+echo -e "$this Finis Africae..."

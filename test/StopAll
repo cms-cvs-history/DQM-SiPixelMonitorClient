@@ -10,6 +10,3 @@ echo -e "$this Done"
 
 #rm -rf SiPixelWebClient.xml
 #rm -rf profile.xml
-#rm -rf startMonitorClient
-
-

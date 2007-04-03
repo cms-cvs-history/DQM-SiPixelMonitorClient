@@ -1,9 +1,0 @@
-eval `scramv1 ru -sh`
-xdaq.exe -h lxplus013.cern.ch -p 1972 -e profile.xml &
-if ! perl webPingXDAQ.pl lxplus013.cern.ch 1972 10
-then
-  echo "executive didn't start properly"
-else
-  perl sendCmdToApp.pl lxplus013.cern.ch 1972 SiPixelWebClient.xml
-fi
-

@@ -8,11 +8,11 @@ HOSTNAME=$(echo `/bin/hostname` | sed 's/\//\\\//g')
 
 TEST_PATH=$(echo "${PWD}" | sed 's/\//\\\//g')
 
-MWC_LIB1="${LOCALRT}/lib/${SCRAM_ARCH}/libDQMSiPixelMonitorClient.so"
+MWC_LIB1="${LOCALRT}/lib/${SCRAM_ARCH}/pluginDQMSiPixelMonitorClient.so"
 if [ ! -f $MWC_LIB1 ]; then
     echo "Library not found! Will pick it up from the release area..."
     
-MWC_LIB1="${CMSSW_RELEASE_BASE}/lib/${SCRAM_ARCH}/libDQMSiPixelMonitorClient.so"
+MWC_LIB1="${CMSSW_RELEASE_BASE}/lib/${SCRAM_ARCH}/pluginDQMSiPixelMonitorClient.so"
 else 
     echo "Library found!"
 fi

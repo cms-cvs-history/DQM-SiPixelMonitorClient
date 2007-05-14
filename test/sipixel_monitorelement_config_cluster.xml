@@ -1,0 +1,32 @@
+<MonElementConfiguration> 
+   <TkMap name="Summary Map" update_frequency="200">
+   </TkMap>
+   <SummaryPlot>
+      <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 
+           <MonElement name="nclusters"></MonElement>
+           <MonElement name="y">      </MonElement>
+           <MonElement name="x">      </MonElement>
+           <MonElement name="charge"> </MonElement>
+           <MonElement name="size">   </MonElement>
+           <MonElement name="sizeX">  </MonElement>
+           <MonElement name="sizeY">  </MonElement>
+           <MonElement name="minrow"> </MonElement>
+           <MonElement name="maxrow"> </MonElement>
+           <MonElement name="mincol"> </MonElement>
+           <MonElement name="maxcol"> </MonElement>
+      </SubStructureBarrelLevel> 
+      <SubStructureEndcapLevel name="Panel_" update_frequency="300"> 
+           <MonElement name="nclusters"></MonElement>
+           <MonElement name="y">      </MonElement>
+           <MonElement name="x">      </MonElement>
+           <MonElement name="charge"> </MonElement>
+           <MonElement name="size">   </MonElement>
+           <MonElement name="sizeX">  </MonElement>
+           <MonElement name="sizeY">  </MonElement>
+           <MonElement name="minrow"> </MonElement>
+           <MonElement name="maxrow"> </MonElement>
+           <MonElement name="mincol"> </MonElement>
+           <MonElement name="maxcol"> </MonElement>
+      </SubStructureEndcapLevel> 
+   </SummaryPlot>
+</MonElementConfiguration> 

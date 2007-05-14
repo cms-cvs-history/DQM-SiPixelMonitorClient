@@ -80,16 +80,16 @@
      <PARAM name="ymin">1</PARAM> 
      <PARAM name="ymax">8.0</PARAM> 
 </QTEST>
-<QTEST name="DeadChannel:50.0" activate="true"> 
+<QTEST name="DeadChannel:50" activate="true"> 
      <TYPE>DeadChannel</TYPE> 
      <PARAM name="error">0.80</PARAM> 
      <PARAM name="warning">0.95</PARAM> 
      <PARAM name="threshold">50.</PARAM> 
 </QTEST>
 <LINK name="*charge_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-255.0</TestName> 
+  <TestName activate="true">XrangeWithin:0-255</TestName> 
   <TestName activate="true">MeanWithinExpected:chargeRange</TestName> 
-  <TestName activate="true">DeadChannel:50.0</TestName> 
+  <TestName activate="true">DeadChannel:50</TestName> 
 </LINK>
 <LINK name="*maxcol_siPixelClusters_*"> 
   <TestName activate="true">XrangeWithin:0-416</TestName> 
@@ -122,7 +122,7 @@
   <TestName activate="true">XrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="*Summary_charge_in_*"> 
-  <TestName activate="true">YrangeWithin:0-255.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-255</TestName> 
 </LINK>
 <LINK name="Summary_maxcol_*"> 
   <TestName activate="true">YrangeWithin:0-416</TestName> 
@@ -155,30 +155,30 @@
   <TestName activate="true">YrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_PixelBarrel*"> 
-  <TestName activate="true">YrangeWithin:0-10.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Shell*"> 
-  <TestName activate="true">YrangeWithin:0-10.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Layer*"> 
-  <TestName activate="true">YrangeWithin:0-10.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Ladder*"> 
-  <TestName activate="true">YrangeWithin:0-10.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_PixelEndcap*"> 
-  <TestName activate="true">YrangeWithin:0-8.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-8</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_HalfCylinder*"> 
-  <TestName activate="true">YrangeWithin:0-8.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-8</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Disk*"> 
-  <TestName activate="true">YrangeWithin:0-8.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-8</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Blade*"> 
-  <TestName activate="true">YrangeWithin:0-8.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-8</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Panel*"> 
-  <TestName activate="true">YrangeWithin:0-8.0</TestName> 
+  <TestName activate="true">YrangeWithin:0-8</TestName> 
 </LINK>
 </TESTSCONFIGURATION>

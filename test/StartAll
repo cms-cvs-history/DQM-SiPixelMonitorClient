@@ -9,8 +9,8 @@ cat <<EOF
   where
     - RUN_TYPE    (DQM sources you want to activate): digi, clu
 
-  Example 1 : ./StartAll digi
-  Example 2 : ./StartAll clu
+  Example 1 : ./StartAll  digi
+  Example 2 : ./StartAll  clu
 
 EOF
 }
@@ -18,10 +18,10 @@ if [ $# -lt 1 ]; then
   usage; exit 1;
 fi
 
-this="\033[1;31m\033[1m[StartAll]\033[0m - "
-
 source_type=$1
 
+
+this="\033[1;31m\033[1m[StartAll]\033[0m - "
 if [ "$source_type" == "digi" ]; then
   export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
 elif [ "$source_type" == "clu" ]; then
@@ -44,7 +44,6 @@ xterm -T "DQM Collector"    \
       -geometry 80x20+10+10 \
       -e "DQMCollector" &
 
-
 if [ "$source_type" == "digi" ]; then
   cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_digi.xml    sipixel_qualitytest_config.xml
@@ -53,8 +52,8 @@ if [ "$source_type" == "digi" ]; then
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
   xterm -T "DQM Producer (Source)"               \
-        -sb    
-	-hold                                  \
+        -sb                                      \
+        -hold                                    \
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
@@ -68,8 +67,8 @@ elif [ "$source_type" == "clu" ]; then
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
   xterm -T "DQM Producer (Source)"               \
-        -sb    
-	-hold                                  \
+        -sb                                      \
+        -hold                                    \
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
@@ -82,4 +81,4 @@ echo -e "$this ./setup.sh $COLLECTORNAME"
 ./setup.sh $COLLECTORNAME
 echo -e "$this ./startMonitorClient"
 ./startMonitorClient 
-echo -e "$this Startup is finished."
+echo -e "$this STartup finished."

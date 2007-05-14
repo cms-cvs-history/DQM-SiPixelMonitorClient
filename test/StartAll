@@ -7,9 +7,10 @@ cat <<EOF
   ./StartAll  RUN_TYPE
 
   where
-    - RUN_TYPE    (DQM sources you want to activate): digi
+    - RUN_TYPE    (DQM sources you want to activate): digi, clu
 
-  Example 1 : ./StartAll  digi
+  Example 1 : ./StartAll digi
+  Example 2 : ./StartAll clu
 
 EOF
 }
@@ -19,7 +20,13 @@ fi
 
 this="\033[1;31m\033[1m[StartAll]\033[0m - "
 
-export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
+source_type=$1
+
+if [ "$source_type" == "digi" ]; then
+  export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
+elif [ "$source_type" == "clu" ]; then
+  export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test
+fi
 export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
 
 cd ${CONSUMER_PATH}
@@ -37,7 +44,6 @@ xterm -T "DQM Collector"    \
       -geometry 80x20+10+10 \
       -e "DQMCollector" &
 
-source_type=$1
 
 if [ "$source_type" == "digi" ]; then
   cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
@@ -47,7 +53,23 @@ if [ "$source_type" == "digi" ]; then
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
   xterm -T "DQM Producer (Source)"               \
-        -sb                                      \
+        -sb    
+	-hold                                  \
+        -bg "#d3f2fc"                            \
+        -fg black                                \
+        -sl 30000                                \
+        -geometry 80x20+520+10                   \
+        -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
+elif [ "$source_type" == "clu" ]; then
+  cp sipixel_monitorelement_config_cluster.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_cluster.xml    sipixel_qualitytest_config.xml
+  cd  ${PRODUCER_PATH}
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg 
+  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
+  echo -e "$this Starting Producer on xterm" 
+  xterm -T "DQM Producer (Source)"               \
+        -sb    
+	-hold                                  \
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
@@ -60,4 +82,4 @@ echo -e "$this ./setup.sh $COLLECTORNAME"
 ./setup.sh $COLLECTORNAME
 echo -e "$this ./startMonitorClient"
 ./startMonitorClient 
-echo -e "$this Finis Africae..."
+echo -e "$this Startup is finished."

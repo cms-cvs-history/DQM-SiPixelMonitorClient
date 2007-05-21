@@ -87,72 +87,72 @@
      <PARAM name="threshold">50.</PARAM> 
 </QTEST>
 <LINK name="*charge_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-255</TestName> 
-  <TestName activate="true">MeanWithinExpected:chargeRange</TestName> 
-  <TestName activate="true">DeadChannel:50</TestName> 
+  <TestName activate="false">XrangeWithin:0-255</TestName> 
+  <TestName activate="false">MeanWithinExpected:chargeRange</TestName> 
+  <TestName activate="false">DeadChannel:50</TestName> 
 </LINK>
 <LINK name="*maxcol_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-416</TestName> 
+  <TestName activate="false">XrangeWithin:0-416</TestName> 
 </LINK>
 <LINK name="*maxrow_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-160</TestName> 
+  <TestName activate="false">XrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="*mincol_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-416</TestName> 
+  <TestName activate="false">XrangeWithin:0-416</TestName> 
 </LINK>
 <LINK name="*minrow_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-160</TestName> 
+  <TestName activate="false">XrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="*nclusters_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-10</TestName> 
+  <TestName activate="false">XrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*sizeX_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-10</TestName> 
+  <TestName activate="false">XrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*sizeY_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-10</TestName> 
+  <TestName activate="false">XrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*size_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-10</TestName> 
+  <TestName activate="false">XrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*y_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-416</TestName> 
+  <TestName activate="false">XrangeWithin:0-416</TestName> 
 </LINK>
 <LINK name="*x_siPixelClusters_*"> 
-  <TestName activate="true">XrangeWithin:0-160</TestName> 
+  <TestName activate="false">XrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="*Summary_charge_in_*"> 
-  <TestName activate="true">YrangeWithin:0-255</TestName> 
+  <TestName activate="false">YrangeWithin:0-255</TestName> 
 </LINK>
 <LINK name="Summary_maxcol_*"> 
-  <TestName activate="true">YrangeWithin:0-416</TestName> 
+  <TestName activate="false">YrangeWithin:0-416</TestName> 
 </LINK>
 <LINK name="Summary_maxrow_*"> 
-  <TestName activate="true">YrangeWithin:0-160</TestName> 
+  <TestName activate="false">YrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="Summary_mincol_*"> 
-  <TestName activate="true">YrangeWithin:0-416</TestName> 
+  <TestName activate="false">YrangeWithin:0-416</TestName> 
 </LINK>
 <LINK name="Summary_minrow_*"> 
-  <TestName activate="true">YrangeWithin:0-160</TestName> 
+  <TestName activate="false">YrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="Summary_nclusters_*"> 
-  <TestName activate="true">YrangeWithin:0-10</TestName> 
+  <TestName activate="false">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="Summary_sizeX_*"> 
-  <TestName activate="true">YrangeWithin:0-10</TestName> 
+  <TestName activate="false">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="Summary_sizeY_*"> 
-  <TestName activate="true">YrangeWithin:0-10</TestName> 
+  <TestName activate="false">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="Summary_size_*"> 
-  <TestName activate="true">YrangeWithin:0-50</TestName> 
+  <TestName activate="false">YrangeWithin:0-50</TestName> 
 </LINK>
 <LINK name="Summary_y_*"> 
-  <TestName activate="true">YrangeWithin:0-416</TestName> 
+  <TestName activate="false">YrangeWithin:0-416</TestName> 
 </LINK>
 <LINK name="Summary_x_*"> 
-  <TestName activate="true">YrangeWithin:0-160</TestName> 
+  <TestName activate="false">YrangeWithin:0-160</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:0-10</TestName> 
@@ -164,7 +164,7 @@
   <TestName activate="true">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Ladder*"> 
-  <TestName activate="true">YrangeWithin:0-10</TestName> 
+  <TestName activate="false">YrangeWithin:0-10</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:0-8</TestName> 
@@ -176,9 +176,9 @@
   <TestName activate="true">YrangeWithin:0-8</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Blade*"> 
-  <TestName activate="true">YrangeWithin:0-8</TestName> 
+  <TestName activate="false">YrangeWithin:0-8</TestName> 
 </LINK>
 <LINK name="*Summary_nclusters_in_Panel*"> 
-  <TestName activate="true">YrangeWithin:0-8</TestName> 
+  <TestName activate="false">YrangeWithin:0-8</TestName> 
 </LINK>
 </TESTSCONFIGURATION>

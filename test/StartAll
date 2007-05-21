@@ -44,6 +44,9 @@ xterm -T "DQM Collector"    \
       -geometry 80x20+10+10 \
       -e "DQMCollector" &
 
+cp ${CONSUMER_PATH}/js_files/.svgmap.js ${CONSUMER_PATH}/js_files/svgmap.js
+perl -pi.bak -e "s#serverHost#$COLLECTORNAME#g" ${CONSUMER_PATH}/js_files/svgmap.js
+
 if [ "$source_type" == "digi" ]; then
   cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_digi.xml    sipixel_qualitytest_config.xml
@@ -81,4 +84,4 @@ echo -e "$this ./setup.sh $COLLECTORNAME"
 ./setup.sh $COLLECTORNAME
 echo -e "$this ./startMonitorClient"
 ./startMonitorClient 
-echo -e "$this STartup finished."
+echo -e "$this Startup finished."

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+this="\033[1;31m\033[1m[setup.sh]\033[0m - "
+
 eval `scramv1 ru -sh`
 
 COLLECTOR_NODE=$1
@@ -10,15 +12,15 @@ TEST_PATH=$(echo "${PWD}" | sed 's/\//\\\//g')
 
 MWC_LIB1="${LOCALRT}/lib/${SCRAM_ARCH}/pluginDQMSiPixelMonitorClient.so"
 if [ ! -f $MWC_LIB1 ]; then
-    echo "Library not found! Will pick it up from the release area..."
+    echo -e "$this Library not found! Will pick it up from the release area..."
     
 MWC_LIB1="${CMSSW_RELEASE_BASE}/lib/${SCRAM_ARCH}/pluginDQMSiPixelMonitorClient.so"
 else 
-    echo "Library found!"
+    echo -e "$this Library found!"
 fi
 
 MWC_LIB=$(echo "$MWC_LIB1" | sed 's/\//\\\//g')
-echo $MWC_LIB1
+echo -e "$this $MWC_LIB1" 
 
 SERVED_DIR="http://${HOSTNAME}:1972/temporary"
 

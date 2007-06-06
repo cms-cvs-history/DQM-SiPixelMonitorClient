@@ -2,11 +2,17 @@
 
 this="\033[1;34m\033[1m[StopAll]\033[0m - "
 
-echo -e "$this Killing DQMCollector, cmsRun, xdaq.exe"
-killall -9 DQMCollector
-killall -9 cmsRun
-killall -9 xdaq.exe
-echo -e "$this Done"
+echo -e " "
+echo -e "$this \033[1;32m\033[1mKilling DQMCollector, cmsRun, xdaq.exe\033[0m"
+echo -e " "
+killall -q -9 xdaq.exe
+killall -q -9 DQMCollector
+killall -q -9 cmsRun
+perl -e 'open(PIPE,"ps ux |");while(<PIPE>){if( m/DQMCollector/ && !m/perl/ ){$pid=$_; if($pid=~m/(\w+\s+(\d+))/){$pid=$2;}; system("kill -9 $pid");}};close(PIPE);' &
+perl -e 'open(PIPE,"ps ux |");while(<PIPE>){if( m/DQMProducer/  && !m/perl/ ){$pid=$_; if($pid=~m/(\w+\s+(\d+))/){$pid=$2;}; system("kill -9 $pid");}};close(PIPE);' &
+echo -e " "
+echo -e "$this \033[1;31m\033[1mDone\033[0m"
+echo -e " "
 
 #rm -rf SiPixelWebClient.xml
 #rm -rf profile.xml

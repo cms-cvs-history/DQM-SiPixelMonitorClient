@@ -37,7 +37,9 @@ echo -e "$this Local host: " $COLLECTORNAME
 
 echo -e "$this Starting Collector on xterm" 
 xterm -T "DQM Collector"    \
+      -tn "DQMCollector"    \
       -sb                   \
+      -hold                 \
       -bg "#f1feb6"         \
       -fg black             \
       -sl 100               \
@@ -55,12 +57,13 @@ if [ "$source_type" == "digi" ]; then
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
   xterm -T "DQM Producer (Source)"               \
+        -tn "DQMProducer"                        \
         -sb                                      \
         -hold                                    \
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
-        -geometry 80x20+520+10                   \
+        -geometry 80x20+525+10                   \
         -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
 elif [ "$source_type" == "clu" ]; then
   cp sipixel_monitorelement_config_cluster.xml sipixel_monitorelement_config.xml
@@ -69,13 +72,13 @@ elif [ "$source_type" == "clu" ]; then
   perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg 
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
-  xterm -T "DQM Producer (Source)"               \
+  xterm -T "DQMProducer (Source)"                \
         -sb                                      \
         -hold                                    \
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
-        -geometry 80x20+520+10                   \
+        -geometry 80x20+525+10                   \
         -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
 fi
 

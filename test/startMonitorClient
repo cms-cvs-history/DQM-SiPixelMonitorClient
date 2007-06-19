@@ -5,13 +5,13 @@ this="\033[1;33m\033[1m[startMonitorClient]\033[0m - "
 echo -e "$this"
 echo -e "$this Starting"
 eval `scramv1 ru -sh`
-xdaq.exe -h lxplus213.cern.ch -p 1972 -e profile.xml &
-if ! perl webPingXDAQ.pl lxplus213.cern.ch 1972 10
+xdaq.exe -h lxplus219.cern.ch -p 1972 -e profile.xml &
+if ! perl webPingXDAQ.pl lxplus219.cern.ch 1972 10
 then
   echo -e "$this xdaq.exe executive didn't start properly"
 else
   echo -e "$this xdaq.exe executive started properly"
-  perl sendCmdToApp.pl lxplus213.cern.ch 1972 SiPixelWebClient.xml
+  perl sendCmdToApp.pl lxplus219.cern.ch 1972 SiPixelWebClient.xml
 fi
 echo -e "$this Done"
 echo -e "$this"

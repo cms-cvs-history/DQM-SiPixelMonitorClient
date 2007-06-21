@@ -70,7 +70,7 @@ void SiPixelWebInterface::handleCustomRequest(xgi::Input* in,xgi::Output* out)
 
   // get the string that identifies the request:
   std::string requestID = get_from_multimap(requestMap_, "RequestID");
-  cout << " requestID " << requestID << endl;
+  std::cout << " requestID " << requestID << std::endl;
   if (requestID == "SubscribeAll") {
     theActionFlag = SubscribeAll;
   } else if (requestID == "SetupQTest") {
@@ -97,22 +97,22 @@ void SiPixelWebInterface::handleCustomRequest(xgi::Input* in,xgi::Output* out)
     infoExtractor_->readModuleAndHistoList((*mui_p), out, actionExecutor_->getCollationFlag() );    
   } else if (requestID == "ModuleHistoList") {
     theActionFlag = NoAction;
-    string sname = get_from_multimap(requestMap_, "StructureName");
+    std::string sname = get_from_multimap(requestMap_, "StructureName");
     infoExtractor_->readModuleHistoTree((*mui_p), sname, out,
                           actionExecutor_->getCollationFlag());    
   } else if (requestID == "SummaryHistoList") {
     theActionFlag = NoAction;
-    string sname = get_from_multimap(requestMap_, "StructureName");
+    std::string sname = get_from_multimap(requestMap_, "StructureName");
     infoExtractor_->readSummaryHistoTree((*mui_p), sname, out,
                            actionExecutor_->getCollationFlag());    
   } else if (requestID == "AlarmList") {
     theActionFlag = NoAction;
-    string sname = get_from_multimap(requestMap_, "StructureName");
+    std::string sname = get_from_multimap(requestMap_, "StructureName");
     infoExtractor_->readAlarmTree((*mui_p), sname, out,
                            actionExecutor_->getCollationFlag());    
   } else if (requestID == "ReadQTestStatus") {
     theActionFlag = NoAction;
-    string path = get_from_multimap(requestMap_, "Path");
+    std::string path = get_from_multimap(requestMap_, "Path");
     infoExtractor_->readStatusMessage((*mui_p), path, out);
   } else if (requestID == "PlotAsModule") {
     theActionFlag = PlotSingleModuleHistos;    
@@ -125,19 +125,19 @@ void SiPixelWebInterface::handleCustomRequest(xgi::Input* in,xgi::Output* out)
    out->getHTTPResponseHeader().addHeader("Pragma", "no-cache");   
    out->getHTTPResponseHeader().addHeader("Cache-Control", "no-store, no-cache, must-revalidate,max-age=0");
    out->getHTTPResponseHeader().addHeader("Expires","Mon, 26 Jul 1997 05:00:00 GMT");
-   cout << ACYellow << ACBold 
+   std::cout << ACYellow << ACBold 
         << "[SiPixelWebInterface::handleCustomRequest()]" 
 	<< ACPlain
 	<< " Shipping plot back to web client" 
-	<< endl ;
+	<< std::endl ;
    *out << infoExtractor_->getImage().str();
     theActionFlag = NoAction;    
   } else if (requestID == "GetMEList") {
     theActionFlag = NoAction;
     infoExtractor_->readModuleAndHistoList((*mui_p), out, actionExecutor_->getCollationFlag() );    
-    cout << ACYellow << ACBold 
+    std::cout << ACYellow << ACBold 
          << "[SiPixelWebInterface::handleCustomRequest()] Gotcha MEList!" << ACPlain
-	 << endl ;
+	 << std::endl ;
   }
   configureCustomRequest(in, out);
 //  cout<<"leaving handleCustomRequest"<<endl;
@@ -226,12 +226,12 @@ void SiPixelWebInterface::performAction() {
     }
   case SiPixelWebInterface::PlotTkMapHistogram :
     {
-      vector<string> mes;
+      std::vector<std::string> mes;
       int nval = actionExecutor_->getTkMapMENames(mes);
       if (nval == 0) break;
-      for  (vector<string>::iterator it = mes.begin();
+      for  (std::vector<std::string>::iterator it = mes.begin();
 	    it != mes.end(); it++) {
-	requestMap_.insert(pair<string,string>("histo",(*it)));  
+	requestMap_.insert(std::pair<std::string, std::string>("histo",(*it)));  
       }
       infoExtractor_->plotSingleModuleHistos((*mui_p), requestMap_);
       break;
@@ -254,9 +254,9 @@ void SiPixelWebInterface::performAction() {
 void SiPixelWebInterface::returnReplyXml(xgi::Output * out, const std::string& name, const std::string& comment){
    out->getHTTPResponseHeader().addHeader("Content-Type", "text/xml");
   *out << "<?xml version=\"1.0\" ?>" << std::endl;
-  *out << "<TkMap>" << endl;
-  *out << " <Response>" << comment << "</Response>" << endl;
-  *out << "</TkMap>" << endl;
+  *out << "<TkMap>" << std::endl;
+  *out << " <Response>" << comment << "</Response>" << std::endl;
+  *out << "</TkMap>" << std::endl;
 //  cout <<  "<?xml version=\"1.0\" ?>" << std::endl;
 //  cout << "<TkMap>" << endl;
 //  cout << " <Response>" << comment << "</Response>" << endl;
@@ -266,11 +266,11 @@ void SiPixelWebInterface::returnReplyXml(xgi::Output * out, const std::string& n
 
 bool SiPixelWebInterface::createTkMap() {
   if (theActionFlag == SiPixelWebInterface::CreateTkMap) {
-    string sname = get_from_multimap(requestMap_, "MEName");
-    cout << ACYellow << ACBold
+    std::string sname = get_from_multimap(requestMap_, "MEName");
+    std::cout << ACYellow << ACBold
     	 << "[SiPixelWebInterface::createTkMap()]" 
          << ACPlain
-         << " MEName selected for TrackeMap: " << sname << endl ;
+         << " MEName selected for TrackeMap: " << sname << std::endl ;
     actionExecutor_->createTkMap((*mui_p), sname);
     return true;
   } else {

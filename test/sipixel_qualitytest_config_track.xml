@@ -1,0 +1,43 @@
+<TESTSCONFIGURATION> 
+<QTEST name="MeanWithinExpected:xResidualRange" activate="true"> 
+     <TYPE>MeanWithinExpected</TYPE> 
+     <PARAM name="error">0.75</PARAM> 
+     <PARAM name="warning">0.90</PARAM> 
+     <PARAM name="mean">0.0</PARAM> 
+     <PARAM name="useRMS">0</PARAM> 
+     <PARAM name="useSigma">0</PARAM>
+     <PARAM name="useRange">1</PARAM> 
+     <PARAM name="xmin">-1.0</PARAM> 
+     <PARAM name="xmax">1.0</PARAM> 
+</QTEST>
+<QTEST name="MeanWithinExpected:yResidualRange" activate="true"> 
+     <TYPE>MeanWithinExpected</TYPE> 
+     <PARAM name="error">0.75</PARAM> 
+     <PARAM name="warning">0.90</PARAM> 
+     <PARAM name="mean">0.0</PARAM> 
+     <PARAM name="useRMS">0</PARAM> 
+     <PARAM name="useSigma">0</PARAM>
+     <PARAM name="useRange">1</PARAM> 
+     <PARAM name="xmin">-1.0</PARAM> 
+     <PARAM name="xmax">1.0</PARAM> 
+</QTEST>
+<QTEST name="YrangeWithin:-100-100" activate="true"> 
+     <TYPE>ContentsYRange</TYPE> 
+     <PARAM name="error">0.75</PARAM> 
+     <PARAM name="warning">0.90</PARAM> 
+     <PARAM name="ymin">-1.0</PARAM> 
+     <PARAM name="ymax">1.0</PARAM> 
+</QTEST>
+<LINK name="*residual_x_siPixelTracks_*"> 
+  <TestName activate="true">MeanWithinExpected:xResidualRange</TestName> 
+</LINK>
+<LINK name="*residual_y_siPixelTracks_*"> 
+  <TestName activate="true">MeanWithinExpected:yResidualRange</TestName> 
+</LINK>
+<LINK name="*Summary_residual_x_in_*"> 
+  <TestName activate="true">YrangeWithin:-100-100</TestName> 
+</LINK>
+<LINK name="*Summary_residual_y_in_*"> 
+  <TestName activate="true">YrangeWithin:-100-100</TestName> 
+</LINK>
+</TESTSCONFIGURATION>

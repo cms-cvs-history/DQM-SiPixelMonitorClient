@@ -7,10 +7,12 @@ cat <<EOF
   ./StartAll  RUN_TYPE
 
   where
-    - RUN_TYPE    (DQM sources you want to activate): digi, clu
+    - RUN_TYPE    (DQM sources you want to activate): digi, clu, track, all
 
   Example 1 : ./StartAll  digi
   Example 2 : ./StartAll  clu
+  Example 3 : ./StartAll  track
+  Example 4 : ./StartAll  all
 
 EOF
 }
@@ -26,6 +28,11 @@ if [ "$source_type" == "digi" ]; then
   export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
 elif [ "$source_type" == "clu" ]; then
   export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test
+elif [ "$source_type" == "track" ]; then
+  export PRODUCER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorTrack/test
+elif [ "$source_type" == "all" ]; then
+  export PRODUCER_PATH1=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
+  export PRODUCER_PATH2=${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test
 fi
 export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
 
@@ -56,7 +63,7 @@ if [ "$source_type" == "digi" ]; then
   perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg 
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
-  xterm -T "DQM Producer (Source)"               \
+  xterm -T "Pixel DQM Digi Source"               \
         -tn "DQMProducer"                        \
         -sb                                      \
         -hold                                    \
@@ -72,7 +79,53 @@ elif [ "$source_type" == "clu" ]; then
   perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg 
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
-  xterm -T "DQMProducer (Source)"                \
+  xterm -T "Pixel DQM Cluster Source"            \
+        -tn "DQMProducer"                        \
+        -sb                                      \
+        -hold                                    \
+        -bg "#d3f2fc"                            \
+        -fg black                                \
+        -sl 30000                                \
+        -geometry 80x20+525+10                   \
+        -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
+elif [ "$source_type" == "track" ]; then
+  cp sipixel_monitorelement_config_track.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_track.xml    sipixel_qualitytest_config.xml
+  cd  ${PRODUCER_PATH}
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" SiPixelHitToTrackMon.cfg
+  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
+  echo -e "$this Starting Producer on xterm" 
+  xterm -T "Pixel DQM Residual Source"           \
+        -tn "DQMProducer"                        \
+        -sb                                      \
+        -hold                                    \
+        -bg "#d3f2fc"                            \
+        -fg black                                \
+        -sl 30000                                \
+        -geometry 80x20+525+10                   \
+        -e "eval `scramv1 runtime -csh`; cmsRun SiPixelHitToTrackMon.cfg" &
+elif [ "$source_type" == "all" ]; then
+  cp sipixel_monitorelement_config_all.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_all.xml    sipixel_qualitytest_config.xml
+  cd  ${PRODUCER_PATH1}
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg
+  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
+  echo -e "$this Starting Producer on xterm" 
+  xterm -T "Pixel DQM Digi Source"               \
+        -tn "DQMProducer"                        \
+        -sb                                      \
+        -hold                                    \
+        -bg "#d3f2fc"                            \
+        -fg black                                \
+        -sl 30000                                \
+        -geometry 80x20+525+10                   \
+        -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
+  cd  ${PRODUCER_PATH2}
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg
+  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
+  echo -e "$this Starting Producer on xterm" 
+  xterm -T "Pixel DQM Cluster Source"            \
+        -tn "DQMProducer"                        \
         -sb                                      \
         -hold                                    \
         -bg "#d3f2fc"                            \

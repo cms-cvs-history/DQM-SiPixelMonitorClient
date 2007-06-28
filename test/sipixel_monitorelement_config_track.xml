@@ -1,0 +1,26 @@
+<MonElementConfiguration> 
+   <TkMap name="Summary Map" update_frequency="200">
+   </TkMap>
+   <SummaryPlot>
+      <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 
+           <MonElement name="residual_x"></MonElement>
+           <MonElement name="residual_y"></MonElement>
+      </SubStructureBarrelLevel> 
+      <SubStructureGrandBarrelLevel name="Layer_" update_frequency="300"> 
+           <MonElement name="residual_x_RMS"></MonElement>
+           <MonElement name="residual_y_RMS"></MonElement>
+           <MonElement name="residual_x_mean"></MonElement>
+           <MonElement name="residual_y_mean"></MonElement>
+      </SubStructureGrandBarrelLevel> 
+      <SubStructureEndcapLevel name="Panel_" update_frequency="300"> 
+           <MonElement name="residual_x"></MonElement>
+           <MonElement name="residual_y"></MonElement>
+      </SubStructureEndcapLevel> 
+      <SubStructureGrandEndcapLevel name="Blade_" update_frequency="300"> 
+           <MonElement name="residual_x_RMS"></MonElement>
+           <MonElement name="residual_y_RMS"></MonElement>
+           <MonElement name="residual_x_mean"></MonElement>
+           <MonElement name="residual_y_mean"></MonElement>
+      </SubStructureGrandEndcapLevel> 
+   </SummaryPlot>
+</MonElementConfiguration> 

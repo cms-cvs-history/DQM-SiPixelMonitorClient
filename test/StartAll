@@ -131,7 +131,7 @@ elif [ "$source_type" == "all" ]; then
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
-        -geometry 80x20+525+10                   \
+        -geometry 80x20+10+340                   \
         -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
 fi
 

@@ -33,6 +33,7 @@ elif [ "$source_type" == "track" ]; then
 elif [ "$source_type" == "all" ]; then
   export PRODUCER_PATH1=${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test
   export PRODUCER_PATH2=${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test
+  export PRODUCER_PATH3=${CMSSW_BASE}/src/DQM/SiPixelMonitorTrack/test
 fi
 export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
 
@@ -118,7 +119,7 @@ elif [ "$source_type" == "all" ]; then
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
-        -geometry 80x20+525+10                   \
+        -geometry 80x15+525+10                   \
         -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
   cd  ${PRODUCER_PATH2}
   perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg
@@ -131,8 +132,21 @@ elif [ "$source_type" == "all" ]; then
         -bg "#d3f2fc"                            \
         -fg black                                \
         -sl 30000                                \
-        -geometry 80x20+10+340                   \
+        -geometry 80x15+525+260                   \
         -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
+  cd  ${PRODUCER_PATH3}
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" SiPixelHitToTrackMon.cfg
+  perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
+  echo -e "$this Starting Producer on xterm" 
+  xterm -T "Pixel DQM Residual Source"           \
+        -tn "DQMProducer"                        \
+        -sb                                      \
+        -hold                                    \
+        -bg "#d3f2fc"                            \
+        -fg black                                \
+        -sl 30000                                \
+        -geometry 80x15+525+470                   \
+        -e "eval `scramv1 runtime -csh`; cmsRun SiPixelHitToTrackMon.cfg" &
 fi
 
 cd ${CONSUMER_PATH}

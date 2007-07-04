@@ -413,14 +413,14 @@ void SiPixelInformationExtractor::plotTkMapHisto(MonitorUserInterface     * mui,
 	<< "Going to plot "
 	<< theMEName 
 	<< endl ;
-   plotHisto(*it, theMEName) ;
+   plotHisto(*it, theMEName, "1600", "1200") ;
   }
     
 }
 //============================================================================================================
 // --  Plot Selected Monitor Elements
 // 
-void SiPixelInformationExtractor::plotHisto(MonitorElement* theMe, string theMEName) 
+void SiPixelInformationExtractor::plotHisto(MonitorElement* theMe, string theMEName, string canvasW , string canvasH) 
 {
   QString meName ;
 //   cout << ACYellow << ACBold << ACReverse

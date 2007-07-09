@@ -1,5 +1,9 @@
 <MonElementConfiguration> 
    <TkMap name="Summary Map" update_frequency="200">
+           <MonElement name="residual_x_RMS"></MonElement>
+           <MonElement name="residual_y_RMS"></MonElement>
+           <MonElement name="residual_x_mean"></MonElement>
+           <MonElement name="residual_y_mean"></MonElement>
    </TkMap>
    <SummaryPlot>
       <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 
@@ -23,4 +27,10 @@
            <MonElement name="residual_y_mean"></MonElement>
       </SubStructureGrandEndcapLevel> 
    </SummaryPlot>
+
+<QTests>
+<QTestMessageLimit name="limit" update_frequency="100">
+</QTestMessageLimit>
+</QTests>
+
 </MonElementConfiguration> 

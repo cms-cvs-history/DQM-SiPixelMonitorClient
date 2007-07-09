@@ -34,10 +34,16 @@
 <LINK name="*residual_y_siPixelTracks_*"> 
   <TestName activate="true">MeanWithinExpected:yResidualRange</TestName> 
 </LINK>
-<LINK name="*Summary_residual_x_in_*"> 
+<LINK name="*Summary_residual_x_RMS_in_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residual_y_in_*"> 
+<LINK name="*Summary_residual_y_RMS_in_*"> 
+  <TestName activate="true">YrangeWithin:-100-100</TestName> 
+</LINK>
+<LINK name="*Summary_residual_x_mean_in_*"> 
+  <TestName activate="true">YrangeWithin:-100-100</TestName> 
+</LINK>
+<LINK name="*Summary_residual_y_mean_in_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
 </TESTSCONFIGURATION>

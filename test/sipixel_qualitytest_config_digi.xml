@@ -323,27 +323,27 @@
   <TestName activate="true">YrangeWithin:1.6-3.2</TestName> 
 </LINK>
 <LINK name="*Disk_1/Summary_adc_in_Blade*"> 
-  <TestName activate="false">YrangeWithin:83-122</TestName> 
+  <TestName activate="true">YrangeWithin:83-122</TestName> 
 </LINK>
 <LINK name="*Disk_1/Summary_ndigis_in_Blade*"> 
-  <TestName activate="false">YrangeWithin:1.6-3.5</TestName> 
+  <TestName activate="true">YrangeWithin:1.6-3.5</TestName> 
 </LINK>
 <LINK name="*Disk_2/Summary_adc_in_Blade*"> 
-  <TestName activate="false">YrangeWithin:83-127</TestName> 
+  <TestName activate="true">YrangeWithin:83-127</TestName> 
 </LINK>
 <LINK name="*Disk_2/Summary_ndigis_in_Blade*"> 
-  <TestName activate="false">YrangeWithin:1.4-3.4</TestName> 
+  <TestName activate="true">YrangeWithin:1.4-3.4</TestName> 
 </LINK>
 <LINK name="*Disk_1/Blade*/Summary_adc_in_Panel*"> 
-  <TestName activate="false">YrangeWithin:83-122</TestName> 
+  <TestName activate="true">YrangeWithin:83-122</TestName> 
 </LINK>
 <LINK name="*Disk_1/Blade*/Summary_ndigis_in_Panel*"> 
-  <TestName activate="false">YrangeWithin:1.6-3.5</TestName> 
+  <TestName activate="true">YrangeWithin:1.6-3.5</TestName> 
 </LINK>
 <LINK name="*Disk_2/Blade*/Summary_adc_in_Panel*"> 
-  <TestName activate="false">YrangeWithin:83-127</TestName> 
+  <TestName activate="true">YrangeWithin:83-127</TestName> 
 </LINK>
 <LINK name="*Disk_2/Blade*/Summary_ndigis_in_Panel*"> 
-  <TestName activate="false">YrangeWithin:1.4-3.4</TestName> 
+  <TestName activate="true">YrangeWithin:1.4-3.4</TestName> 
 </LINK>
 </TESTSCONFIGURATION>

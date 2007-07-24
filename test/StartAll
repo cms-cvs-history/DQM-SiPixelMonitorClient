@@ -98,7 +98,7 @@ elif [ "$source_type" == "track" ]; then
   cp sipixel_monitorelement_config_track.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_track.xml    sipixel_qualitytest_config.xml
   cd  ${PRODUCER_PATH}
-  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" SiPixelHitToTrackMon.cfg
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"   ../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
   xterm -T "Pixel DQM Residual Source"           \
@@ -109,7 +109,7 @@ elif [ "$source_type" == "track" ]; then
         -fg black                                \
         -sl 30000                                \
         -geometry 80x20+525+10                   \
-        -e "eval `scramv1 runtime -csh`; cmsRun SiPixelHitToTrackMon.cfg" &
+        -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
 elif [ "$source_type" == "all" ]; then
   cp sipixel_monitorelement_config_all.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_all.xml    sipixel_qualitytest_config.xml
@@ -140,7 +140,7 @@ elif [ "$source_type" == "all" ]; then
         -geometry 80x15+525+250                   \
         -e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
   cd  ${PRODUCER_PATH3}
-  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" SiPixelHitToTrackMon.cfg
+  perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" sipixel_dqm_source_example.cfg
   perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g"	../../SiPixelMonitorClient/test/.SiPixelWebClient.xml 
   echo -e "$this Starting Producer on xterm" 
   xterm -T "Pixel DQM Residual Source"  	 \
@@ -151,7 +151,7 @@ elif [ "$source_type" == "all" ]; then
 	-fg black				 \
 	-sl 30000				 \
 	-geometry 80x15+525+470 		  \
-	-e "eval `scramv1 runtime -csh`; cmsRun SiPixelHitToTrackMon.cfg" &
+	-e "eval `scramv1 runtime -csh`; cmsRun sipixel_dqm_source_example.cfg" &
 fi
 
 cd ${CONSUMER_PATH}

@@ -28,22 +28,22 @@
      <PARAM name="ymin">-1.0</PARAM> 
      <PARAM name="ymax">1.0</PARAM> 
 </QTEST>
-<LINK name="*residual_x_siPixelTracks_*"> 
+<LINK name="*residualX_ctfWithMaterialTracks_*"> 
   <TestName activate="true">MeanWithinExpected:xResidualRange</TestName> 
 </LINK>
-<LINK name="*residual_y_siPixelTracks_*"> 
+<LINK name="*residualY_ctfWithMaterialTracks_*"> 
   <TestName activate="true">MeanWithinExpected:yResidualRange</TestName> 
 </LINK>
-<LINK name="*Summary_residual_x_RMS_in_*"> 
+<LINK name="*Summary_residualX_RMS_in_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residual_y_RMS_in_*"> 
+<LINK name="*Summary_residualY_RMS_in_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residual_x_mean_in_*"> 
+<LINK name="*Summary_residualX_mean_in_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residual_y_mean_in_*"> 
+<LINK name="*Summary_residualY_mean_in_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
 </TESTSCONFIGURATION>

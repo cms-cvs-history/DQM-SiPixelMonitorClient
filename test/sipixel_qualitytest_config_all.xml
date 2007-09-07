@@ -492,100 +492,100 @@
 
 
 
-<LINK name="*Summary_adc_in_PixelBarrel*"> 
+<LINK name="*SUMDIG_adc_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:85-105</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_PixelBarrel*"> 
+<LINK name="*SUMDIG_ndigis_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:2.5-12</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_Shell*"> 
+<LINK name="*SUMDIG_adc_Shell*"> 
   <TestName activate="true">YrangeWithin:85-105</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_Shell*"> 
+<LINK name="*SUMDIG_ndigis_Shell*"> 
   <TestName activate="true">YrangeWithin:2.5-12</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_Layer_1*"> 
+<LINK name="*SUMDIG_adc_Layer_1*"> 
   <TestName activate="true">YrangeWithin:90-103</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_Layer_1*"> 
+<LINK name="*SUMDIG_ndigis_Layer_1*"> 
   <TestName activate="true">YrangeWithin:2.5-13</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_Layer_2*"> 
+<LINK name="*SUMDIG_adc_Layer_2*"> 
   <TestName activate="true">YrangeWithin:89-104</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_Layer_2*"> 
+<LINK name="*SUMDIG_ndigis_Layer_2*"> 
   <TestName activate="true">YrangeWithin:2-9</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_Layer_3*"> 
+<LINK name="*SUMDIG_adc_Layer_3*"> 
   <TestName activate="true">YrangeWithin:83-108</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_Layer_3*"> 
+<LINK name="*SUMDIG_ndigis_Layer_3*"> 
   <TestName activate="true">YrangeWithin:2-8</TestName> 
 </LINK>
-<LINK name="*Layer_1/Summary_adc_in_Ladder*"> 
+<LINK name="*Layer_1/SUMDIG_adc_Ladder*"> 
   <TestName activate="true">YrangeWithin:88-105</TestName> 
 </LINK>
-<LINK name="*Layer_1/Summary_ndigis_in_Ladder*"> 
+<LINK name="*Layer_1/SUMDIG_ndigis_Ladder*"> 
   <TestName activate="true">YrangeWithin:2-13.5</TestName> 
 </LINK>
-<LINK name="*Layer_2/Summary_adc_in_Ladder*"> 
+<LINK name="*Layer_2/SUMDIG_adc_Ladder*"> 
   <TestName activate="true">YrangeWithin:87-106</TestName> 
 </LINK>
-<LINK name="*Layer_2/Summary_ndigis_in_Ladder*"> 
+<LINK name="*Layer_2/SUMDIG_ndigis_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.5-9.5</TestName> 
 </LINK>
-<LINK name="*Layer_3/Summary_adc_in_Ladder*"> 
+<LINK name="*Layer_3/SUMDIG_adc_Ladder*"> 
   <TestName activate="true">YrangeWithin:81-110</TestName> 
 </LINK>
-<LINK name="*Layer_3/Summary_ndigis_in_Ladder*"> 
+<LINK name="*Layer_3/SUMDIG_ndigis_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.5-8.5</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_PixelEndcap*"> 
+<LINK name="*SUMDIG_adc_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:75-130</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_PixelEndcap*"> 
+<LINK name="*SUMDIG_ndigis_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:1.4-4</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_HalfCylinder*"> 
+<LINK name="*SUMDIG_adc_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:80-130</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_HalfCylinder*"> 
+<LINK name="*SUMDIG_ndigis_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:1.4-3.4</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_Disk_1*"> 
+<LINK name="*SUMDIG_adc_Disk_1*"> 
   <TestName activate="true">YrangeWithin:85-120</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_Disk_1*"> 
+<LINK name="*SUMDIG_ndigis_Disk_1*"> 
   <TestName activate="true">YrangeWithin:1.8-3.3</TestName> 
 </LINK>
-<LINK name="*Summary_adc_in_Disk_2*"> 
+<LINK name="*SUMDIG_adc_Disk_2*"> 
   <TestName activate="true">YrangeWithin:85-125</TestName> 
 </LINK>
-<LINK name="*Summary_ndigis_in_Disk_2*"> 
+<LINK name="*SUMDIG_ndigis_Disk_2*"> 
   <TestName activate="true">YrangeWithin:1.6-3.2</TestName> 
 </LINK>
-<LINK name="*Disk_1/Summary_adc_in_Blade*"> 
+<LINK name="*Disk_1/SUMDIG_adc_Blade*"> 
   <TestName activate="true">YrangeWithin:83-122</TestName> 
 </LINK>
-<LINK name="*Disk_1/Summary_ndigis_in_Blade*"> 
+<LINK name="*Disk_1/SUMDIG_ndigis_Blade*"> 
   <TestName activate="true">YrangeWithin:1.6-3.5</TestName> 
 </LINK>
-<LINK name="*Disk_2/Summary_adc_in_Blade*"> 
+<LINK name="*Disk_2/SUMDIG_adc_Blade*"> 
   <TestName activate="true">YrangeWithin:83-127</TestName> 
 </LINK>
-<LINK name="*Disk_2/Summary_ndigis_in_Blade*"> 
+<LINK name="*Disk_2/SUMDIG_ndigis_Blade*"> 
   <TestName activate="true">YrangeWithin:1.4-3.4</TestName> 
 </LINK>
-<LINK name="*Disk_1/Blade*/Summary_adc_in_Panel*"> 
+<LINK name="*Disk_1/Blade*/SUMDIG_adc_Panel*"> 
   <TestName activate="true">YrangeWithin:83-122</TestName> 
 </LINK>
-<LINK name="*Disk_1/Blade*/Summary_ndigis_in_Panel*"> 
+<LINK name="*Disk_1/Blade*/SUMDIG_ndigis_Panel*"> 
   <TestName activate="true">YrangeWithin:1.6-3.5</TestName> 
 </LINK>
-<LINK name="*Disk_2/Blade*/Summary_adc_in_Panel*"> 
+<LINK name="*Disk_2/Blade*/SUMDIG_adc_Panel*"> 
   <TestName activate="true">YrangeWithin:83-127</TestName> 
 </LINK>
-<LINK name="*Disk_2/Blade*/Summary_ndigis_in_Panel*"> 
+<LINK name="*Disk_2/Blade*/SUMDIG_ndigis_Panel*"> 
   <TestName activate="true">YrangeWithin:1.4-3.4</TestName> 
 </LINK>
 
@@ -626,183 +626,183 @@
 </LINK>
 <!-- Summary ME's: -->
 <!-- PixelBarrel: -->
-<LINK name="*Summary_charge_in_PixelBarrel*"> 
+<LINK name="*SUMCLU_charge_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:20-150</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_PixelBarrel*"> 
+<LINK name="*SUMCLU_nclusters_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:0.9-1.7</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_PixelBarrel*"> 
+<LINK name="*SUMCLU_sizeX_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:1.5-3.5</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_PixelBarrel*"> 
+<LINK name="*SUMCLU_sizeY_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:1-10</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_PixelBarrel*"> 
+<LINK name="*SUMCLU_size_PixelBarrel*"> 
   <TestName activate="true">YrangeWithin:1-12</TestName> 
 </LINK>
 <!-- PixelBarrel/Shell: -->
-<LINK name="*Summary_charge_in_Shell*"> 
+<LINK name="*SUMCLU_charge_Shell*"> 
   <TestName activate="true">YrangeWithin:20-150</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_Shell*"> 
+<LINK name="*SUMCLU_nclusters_Shell*"> 
   <TestName activate="true">YrangeWithin:0.9-1.7</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_Shell*"> 
+<LINK name="*SUMCLU_sizeX_Shell*"> 
   <TestName activate="true">YrangeWithin:1.5-3.5</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Shell*"> 
+<LINK name="*SUMCLU_sizeY_Shell*"> 
   <TestName activate="true">YrangeWithin:1-10</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Shell*"> 
+<LINK name="*SUMCLU_size_Shell*"> 
   <TestName activate="true">YrangeWithin:1-12</TestName> 
 </LINK>
 <!-- PixelBarrel/Shell/Layer: -->
-<LINK name="*Summary_charge_in_Layer_1*"> 
+<LINK name="*SUMCLU_charge_Layer_1*"> 
   <TestName activate="true">YrangeWithin:30-155</TestName> 
 </LINK>
-<LINK name="*Summary_charge_in_Layer_2*"> 
+<LINK name="*SUMCLU_charge_Layer_2*"> 
   <TestName activate="true">YrangeWithin:20-120</TestName> 
 </LINK>
-<LINK name="*Summary_charge_in_Layer_3*"> 
+<LINK name="*SUMCLU_charge_Layer_3*"> 
   <TestName activate="true">YrangeWithin:20-100</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_Layer*"> 
+<LINK name="*SUMCLU_nclusters_Layer*"> 
   <TestName activate="true">YrangeWithin:0.9-1.7</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_Layer*"> 
+<LINK name="*SUMCLU_sizeX_Layer*"> 
   <TestName activate="true">YrangeWithin:1.5-3.5</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Layer_1*"> 
+<LINK name="*SUMCLU_sizeY_Layer_1*"> 
   <TestName activate="true">YrangeWithin:1.8-10.5</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Layer_2*"> 
+<LINK name="*SUMCLU_sizeY_Layer_2*"> 
   <TestName activate="true">YrangeWithin:1.2-7</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Layer_3*"> 
+<LINK name="*SUMCLU_sizeY_Layer_3*"> 
   <TestName activate="true">YrangeWithin:1-6</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Layer_1*"> 
+<LINK name="*SUMCLU_size_Layer_1*"> 
   <TestName activate="true">YrangeWithin:1.8-12.5</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Layer_2*"> 
+<LINK name="*SUMCLU_size_Layer_2*"> 
   <TestName activate="true">YrangeWithin:1.2-9</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Layer_3*"> 
+<LINK name="*SUMCLU_size_Layer_3*"> 
   <TestName activate="true">YrangeWithin:1-8</TestName> 
 </LINK>
 <!-- PixelBarrel/Shell/Layer/Ladder: -->
-<LINK name="*Layer_1/Summary_charge_in_Ladder*"> 
+<LINK name="*Layer_1/SUMCLU_charge_Ladder*"> 
   <TestName activate="true">YrangeWithin:30-155</TestName> 
 </LINK>
-<LINK name="*Layer_2/Summary_charge_in_Ladder*"> 
+<LINK name="*Layer_2/SUMCLU_charge_Ladder*"> 
   <TestName activate="true">YrangeWithin:20-120</TestName> 
 </LINK>
-<LINK name="*Layer_3/Summary_charge_in_Ladder*"> 
+<LINK name="*Layer_3/SUMCLU_charge_Ladder*"> 
   <TestName activate="true">YrangeWithin:20-100</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_Ladder*"> 
+<LINK name="*SUMCLU_nclusters_Ladder*"> 
   <TestName activate="true">YrangeWithin:0.9-1.7</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_Ladder*"> 
+<LINK name="*SUMCLU_sizeX_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.5-3.5</TestName> 
 </LINK>
-<LINK name="*Layer_1/Summary_sizeY_in_Ladder*"> 
+<LINK name="*Layer_1/SUMCLU_sizeY_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.8-10.5</TestName> 
 </LINK>
-<LINK name="*Layer_2/Summary_sizeY_in_Ladder*"> 
+<LINK name="*Layer_2/SUMCLU_sizeY_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.2-7</TestName> 
 </LINK>
-<LINK name="*Layer_3/Summary_sizeY_in_Ladder*"> 
+<LINK name="*Layer_3/SUMCLU_sizeY_Ladder*"> 
   <TestName activate="true">YrangeWithin:1-6</TestName> 
 </LINK>
-<LINK name="*Layer_1/Summary_size_in_Ladder*"> 
+<LINK name="*Layer_1/SUMCLU_size_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.8-12.5</TestName> 
 </LINK>
-<LINK name="*Layer_2/Summary_size_in_Ladder*"> 
+<LINK name="*Layer_2/SUMCLU_size_Ladder*"> 
   <TestName activate="true">YrangeWithin:1.2-9</TestName> 
 </LINK>
-<LINK name="*Layer_3/Summary_size_in_Ladder*"> 
+<LINK name="*Layer_3/SUMCLU_size_Ladder*"> 
   <TestName activate="true">YrangeWithin:1-8</TestName> 
 </LINK>
 <!-- PixelEndcap: -->
-<LINK name="*Summary_charge_in_PixelEndcap*"> 
+<LINK name="*SUMCLU_charge_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:20-60</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_PixelEndcap*"> 
+<LINK name="*SUMCLU_nclusters_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:0.99-1.35</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_PixelEndcap*"> 
+<LINK name="*SUMCLU_sizeX_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:1-3</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_PixelEndcap*"> 
+<LINK name="*SUMCLU_sizeY_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:0.7-2.5</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_PixelEndcap*"> 
+<LINK name="*SUMCLU_size_PixelEndcap*"> 
   <TestName activate="true">YrangeWithin:1-5</TestName> 
 </LINK>
 <!-- PixelEndcap/HalfCylinder: -->
-<LINK name="*Summary_charge_in_HalfCylinder*"> 
+<LINK name="*SUMCLU_charge_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:20-60</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_HalfCylinder*"> 
+<LINK name="*SUMCLU_nclusters_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:0.99-1.35</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_HalfCylinder*"> 
+<LINK name="*SUMCLU_sizeX_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:1-3</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_HalfCylinder*"> 
+<LINK name="*SUMCLU_sizeY_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:0.7-2.5</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_HalfCylinder*"> 
+<LINK name="*SUMCLU_size_HalfCylinder*"> 
   <TestName activate="true">YrangeWithin:1-5</TestName> 
 </LINK>
 <!-- PixelEndcap/HalfCylinder/Disk: -->
-<LINK name="*Summary_charge_in_Disk*"> 
+<LINK name="*SUMCLU_charge_Disk*"> 
   <TestName activate="true">YrangeWithin:20-60</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_Disk*"> 
+<LINK name="*SUMCLU_nclusters_Disk*"> 
   <TestName activate="true">YrangeWithin:0.99-1.35</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_Disk*"> 
+<LINK name="*SUMCLU_sizeX_Disk*"> 
   <TestName activate="true">YrangeWithin:1-3</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Disk*"> 
+<LINK name="*SUMCLU_sizeY_Disk*"> 
   <TestName activate="true">YrangeWithin:0.7-2.5</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Disk*"> 
+<LINK name="*SUMCLU_size_Disk*"> 
   <TestName activate="true">YrangeWithin:1-5</TestName> 
 </LINK>
 <!-- PixelEndcap/HalfCylinder/Disk/Blade: -->
-<LINK name="*Summary_charge_in_Blade*"> 
+<LINK name="*SUMCLU_charge_Blade*"> 
   <TestName activate="true">YrangeWithin:20-60</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_Blade*"> 
+<LINK name="*SUMCLU_nclusters_Blade*"> 
   <TestName activate="true">YrangeWithin:0.99-1.35</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_Blade*"> 
+<LINK name="*SUMCLU_sizeX_Blade*"> 
   <TestName activate="true">YrangeWithin:1-3</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Blade*"> 
+<LINK name="*SUMCLU_sizeY_Blade*"> 
   <TestName activate="true">YrangeWithin:0.7-2.5</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Blade*"> 
+<LINK name="*SUMCLU_size_Blade*"> 
   <TestName activate="true">YrangeWithin:1-5</TestName> 
 </LINK>
 <!-- PixelEndcap/HalfCylinder/Disk/Blade/Panel: -->
-<LINK name="*Summary_charge_in_Panel*"> 
+<LINK name="*SUMCLU_charge_Panel*"> 
   <TestName activate="true">YrangeWithin:20-60</TestName> 
 </LINK>
-<LINK name="*Summary_nclusters_in_Panel*"> 
+<LINK name="*SUMCLU_nclusters_Panel*"> 
   <TestName activate="true">YrangeWithin:0.99-1.35</TestName> 
 </LINK>
-<LINK name="*Summary_sizeX_in_Panel*"> 
+<LINK name="*SUMCLU_sizeX_Panel*"> 
   <TestName activate="true">YrangeWithin:1-3</TestName> 
 </LINK>
-<LINK name="*Summary_sizeY_in_Panel*"> 
+<LINK name="*SUMCLU_sizeY_Panel*"> 
   <TestName activate="true">YrangeWithin:0.7-2.5</TestName> 
 </LINK>
-<LINK name="*Summary_size_in_Panel*"> 
+<LINK name="*SUMCLU_size_Panel*"> 
   <TestName activate="true">YrangeWithin:1-5</TestName> 
 </LINK>
 
@@ -813,16 +813,16 @@
 <LINK name="*residualY_ctfWithMaterialTracks_*"> 
   <TestName activate="true">MeanWithinExpected:yResidualRange</TestName> 
 </LINK>
-<LINK name="*Summary_residualX_RMS_in_*"> 
+<LINK name="*SUMRES_residualX_RMS_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residualY_RMS_in_*"> 
+<LINK name="*SUMRES_residualY_RMS_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residualX_mean_in_*"> 
+<LINK name="*SUMRES_residualX_mean_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residualY_mean_in_*"> 
+<LINK name="*SUMRES_residualY_mean_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
 

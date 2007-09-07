@@ -23,8 +23,13 @@
 </SummaryPlot>
 
 <QTests>
-<QTestMessageLimit name="limit" update_frequency="100">
+<QTestMessageLimit name="limit" value="100">
 </QTestMessageLimit>
 </QTests>
+
+<Source>
+<SourceType name="source" code="1">
+</SourceType>
+</Source>
 
 </MonElementConfiguration> 

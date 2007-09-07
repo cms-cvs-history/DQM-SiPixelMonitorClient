@@ -34,16 +34,16 @@
 <LINK name="*residualY_ctfWithMaterialTracks_*"> 
   <TestName activate="true">MeanWithinExpected:yResidualRange</TestName> 
 </LINK>
-<LINK name="*Summary_residualX_RMS_in_*"> 
+<LINK name="*SUMRES_residualX_RMS_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residualY_RMS_in_*"> 
+<LINK name="*SUMRES_residualY_RMS_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residualX_mean_in_*"> 
+<LINK name="*SUMRES_residualX_mean_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
-<LINK name="*Summary_residualY_mean_in_*"> 
+<LINK name="*SUMRES_residualY_mean_*"> 
   <TestName activate="true">YrangeWithin:-100-100</TestName> 
 </LINK>
 </TESTSCONFIGURATION>

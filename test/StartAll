@@ -7,8 +7,13 @@ cat <<EOF
   ./StartAll  RUN_TYPE
 
   where
+<<<<<<< StartAll
+    - RUN_TYPE    (DQM sources you want to activate): raw, digi, clu, track, all, digiclu
+=======
     - RUN_TYPE    (DQM sources you want to activate): digi, clu, track, all, digiclu
+>>>>>>> 1.17
 
+  Example 0 : ./StartAll  raw
   Example 1 : ./StartAll  digi
   Example 2 : ./StartAll  clu
   Example 3 : ./StartAll  track
@@ -30,11 +35,24 @@ echo -e "$this"
 echo -e "$this Command: StartAll $source_type"
 echo -e "$this"
 
+<<<<<<< StartAll
+if [ "$source_type" == "raw" ]; then
+  cp sipixel_monitorelement_config_raw.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_raw.xml    sipixel_qualitytest_config.xml
+  perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {RAWmonitor}#g" AllSources.cfg 
+  perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorRawData/test/Pixel_DQM_Error.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorRawData/data/SiPixelMonitorRawData.cfi
+elif [ "$source_type" == "digi" ]; then
+  cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_digi.xml    sipixel_qualitytest_config.xml
+  perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {DIGImonitor}#g" AllSources.cfg 
+  perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test/Pixel_DQM_Digi.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/data/SiPixelMonitorDigi.cfi
+=======
 if [ "$source_type" == "digi" ]; then
   cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_digi.xml    sipixel_qualitytest_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {DIGImonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test/Pixel_DQM_Digi.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/data/SiPixelMonitorDigi.cfi
+>>>>>>> 1.17
 elif [ "$source_type" == "clu" ]; then
   cp sipixel_monitorelement_config_cluster.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_cluster.xml    sipixel_qualitytest_config.xml

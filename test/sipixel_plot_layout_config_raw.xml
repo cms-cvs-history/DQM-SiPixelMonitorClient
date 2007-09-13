@@ -1,0 +1,25 @@
+<Layouts>
+  <layout name="PixelBarrel">
+    <monitorable name="SUMRAW_errorType_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_NErrors_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_TBMType_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_EvtNbr_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_ROCId_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_DCOLId_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_PXId_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_ROCNmbr_PixelBarrel"></monitorable>
+    <monitorable name="SUMRAW_TBMMessage_PixelBarrel"></monitorable>
+  </layout>
+  <layout name="PixelEndcap">
+    <monitorable name="SUMRAW_errorType_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_NErrors_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_TBMType_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_EvtNbr_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_ROCId_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_DCOLId_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_PXId_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_ROCNmbr_PixelEndcap"></monitorable>
+    <monitorable name="SUMRAW_TBMMessage_PixelEndcap"></monitorable>
+  </layout>
+</Layouts>
+

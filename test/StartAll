@@ -35,26 +35,31 @@ echo -e "$this"
 if [ "$source_type" == "raw" ]; then
   cp sipixel_monitorelement_config_raw.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_raw.xml    sipixel_qualitytest_config.xml
+  cp sipixel_plot_layout_config_raw.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {RAWmonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorRawData/test/Pixel_DQM_Error.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorRawData/data/SiPixelMonitorRawData.cfi
 elif [ "$source_type" == "digi" ]; then
   cp sipixel_monitorelement_config_digi.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_digi.xml    sipixel_qualitytest_config.xml
+  cp sipixel_plot_layout_config_digi.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {DIGImonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test/Pixel_DQM_Digi.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/data/SiPixelMonitorDigi.cfi
 elif [ "$source_type" == "clu" ]; then
   cp sipixel_monitorelement_config_cluster.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_cluster.xml    sipixel_qualitytest_config.xml
+  cp sipixel_plot_layout_config_cluster.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {CLUmonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test/Pixel_DQM_Cluster.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/data/SiPixelMonitorCluster.cfi
 elif [ "$source_type" == "track" ]; then
   cp sipixel_monitorelement_config_track.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_track.xml    sipixel_qualitytest_config.xml
+  cp sipixel_plot_layout_config_track.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {TRKlocalreco,TRKckf,TRKmonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#OutputFileName=.+#OutputFileName=\"${CMSSW_BASE}/src/DQM/SiPixelMonitorTrack/test/Pixel_DQM_TrackResiduals.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorTrack/data/SiPixelMonitorTrackResiduals.cfi
 elif [ "$source_type" == "all" ]; then
   cp sipixel_monitorelement_config_all.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_all.xml    sipixel_qualitytest_config.xml
+  cp sipixel_plot_layout_config_all.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {DIGImonitor,CLUmonitor,TRKlocalrec,TRKckf,TRKmonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test/Pixel_DQM_Digi.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/data/SiPixelMonitorDigi.cfi
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test/Pixel_DQM_Cluster.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/data/SiPixelMonitorCluster.cfi
@@ -62,6 +67,7 @@ elif [ "$source_type" == "all" ]; then
 elif [ "$source_type" == "digiclu" ]; then
   cp sipixel_monitorelement_config_digi_cluster.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_digi_cluster.xml    sipixel_qualitytest_config.xml
+  cp sipixel_plot_layout_config_digi_cluster.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {DIGImonitor,CLUmonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/test/Pixel_DQM_Digi.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorDigi/data/SiPixelMonitorDigi.cfi
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test/Pixel_DQM_Cluster.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/data/SiPixelMonitorCluster.cfi

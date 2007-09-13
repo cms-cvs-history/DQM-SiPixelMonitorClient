@@ -1,0 +1,16 @@
+<Layouts>
+  <layout name="PixelBarrel">
+    <monitorable name="SUMDIG_ndigis_PixelBarrel"></monitorable>
+    <monitorable name="SUMDIG_adc_PixelBarrel"></monitorable>
+    <monitorable name="SUMCLU_nclusters_PixelBarrel"></monitorable>
+    <monitorable name="SUMCLU_charge_PixelBarrel"></monitorable>
+    <monitorable name="SUMCLU_size_PixelBarrel"></monitorable>
+  </layout>
+  <layout name="PixelEndcap">
+    <monitorable name="SUMDIG_ndigis_PixelEndcap"></monitorable>
+    <monitorable name="SUMDIG_adc_PixelEndcap"></monitorable>
+    <monitorable name="SUMCLU_nclusters_PixelEndcap"></monitorable>
+    <monitorable name="SUMCLU_charge_PixelEndcap"></monitorable>
+    <monitorable name="SUMCLU_size_PixelEndcap"></monitorable>
+  </layout>
+</Layouts>

@@ -82,4 +82,9 @@
 </QTestMessageLimit>
 </QTests>
 
+<Source>
+<SourceType name="source" code="6">
+</SourceType>
+</Source>
+
 </MonElementConfiguration> 

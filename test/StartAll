@@ -32,6 +32,9 @@ echo -e "$this"
 echo -e "$this Command: StartAll $source_type"
 echo -e "$this"
 
+export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
+cd ${CONSUMER_PATH}
+echo ${CONSUMER_PATH}
 if [ "$source_type" == "raw" ]; then
   cp sipixel_monitorelement_config_raw.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_raw.xml    sipixel_qualitytest_config.xml
@@ -73,9 +76,6 @@ elif [ "$source_type" == "digiclu" ]; then
   perl -pi.bak -e "s#outputFile = .+#outputFile = \"${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/test/Pixel_DQM_Cluster.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorCluster/data/SiPixelMonitorCluster.cfi
 fi
 
-export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
-cd ${CONSUMER_PATH}
-echo ${CONSUMER_PATH}
 ./StopAll
 echo "done with StopAll"
 eval `scramv1 run -sh`

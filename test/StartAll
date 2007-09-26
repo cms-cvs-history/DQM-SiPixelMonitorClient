@@ -25,16 +25,18 @@ fi
 
 source_type=$1
 
-this="\033[1;31m\033[1m[StartAll]\033[0m - "
+export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
+
+this="\033[1;31m\033[1m[StartAll]\033[0m           - "
 
 echo -e " "
 echo -e "$this"
 echo -e "$this Command: StartAll $source_type"
 echo -e "$this"
 
-export CONSUMER_PATH=${CMSSW_BASE}/src/DQM/SiPixelMonitorClient/test
 cd ${CONSUMER_PATH}
-echo ${CONSUMER_PATH}
+echo -e "$this CONSUMER_PATH: ${CONSUMER_PATH}"
+
 if [ "$source_type" == "raw" ]; then
   cp sipixel_monitorelement_config_raw.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_raw.xml    sipixel_qualitytest_config.xml
@@ -77,11 +79,11 @@ elif [ "$source_type" == "digiclu" ]; then
 fi
 
 ./StopAll
-echo "done with StopAll"
+echo -e "$this Done with StopAll"
 eval `scramv1 run -sh`
-echo "done with scramv1"
+echo -e "$this Done with scramv1"
 COLLECTORNAME=`/bin/hostname`
-echo "done setting collectorname"
+echo -e "$this Done setting collectorname"
 echo -e "$this Local host: " $COLLECTORNAME
 perl -pi.bak -e "s#string\">.+</serverHost>#string\">$COLLECTORNAME</serverHost>#g" .SiPixelWebClient.xml 
 perl -pi.bak -e "s#DestinationAddress = .+#DestinationAddress = \"$COLLECTORNAME\"#g" AllSources.cfg 
@@ -121,3 +123,4 @@ echo -e "$this ./setup.sh $COLLECTORNAME"
 echo -e "$this ./startMonitorClient"
 ./startMonitorClient 
 echo -e "$this Startup finished."
+echo -e "$this "

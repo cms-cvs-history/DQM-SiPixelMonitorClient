@@ -1,6 +1,6 @@
 #!/bin/bash
 
-this="\033[1;31m\033[1m[setup.sh]\033[0m - "
+this="\033[1;31m\033[1m[setup.sh]\033[0m           - "
 
 eval `scramv1 ru -sh`
 

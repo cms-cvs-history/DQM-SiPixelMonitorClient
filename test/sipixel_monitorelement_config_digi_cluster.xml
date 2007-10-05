@@ -78,7 +78,7 @@
 </SummaryPlot>
 
 <QTests>
-<QTestMessageLimit name="limit" update_frequency="100">
+<QTestMessageLimit name="limit" value="100">
 </QTestMessageLimit>
 </QTests>
 

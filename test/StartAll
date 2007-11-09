@@ -14,8 +14,9 @@ cat <<EOF
   Example 1 : ./StartAll  digi
   Example 2 : ./StartAll  clu
   Example 3 : ./StartAll  track
-  Example 4 : ./StartAll  all
-  Example 5 : ./StartAll  digiclu
+  Example 4 : ./StartAll  rechit
+  Example 5 : ./StartAll  all
+  Example 6 : ./StartAll  digiclu
 
 EOF
 }
@@ -61,6 +62,11 @@ elif [ "$source_type" == "track" ]; then
   cp sipixel_plot_layout_config_track.xml    sipixel_plot_layout_config.xml
   perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {TRKlocalreco,TRKckf,TRKmonitor}#g" AllSources.cfg 
   perl -pi.bak -e "s#OutputFileName=.+#OutputFileName=\"${CMSSW_BASE}/src/DQM/SiPixelMonitorTrack/test/Pixel_DQM_TrackResiduals.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorTrack/data/SiPixelMonitorTrackResiduals.cfi
+elif [ "$source_type" == "rechit" ]; then
+  cp sipixel_monitorelement_config_rechit.xml sipixel_monitorelement_config.xml
+  cp sipixel_qualitytest_config_rechit.xml    sipixel_qualitytest_config.xml
+  perl -pi.bak -e "s#pDQMSiPixelSources = .+#pDQMSiPixelSources = {HITmonitor}#g" AllSources.cfg 
+  perl -pi.bak -e "s#OutputFileName=.+#OutputFileName=\"${CMSSW_BASE}/src/DQM/SiPixelMonitorRecHit/test/Pixel_DQM_RecHits.root\"#g" ${CMSSW_BASE}/src/DQM/SiPixelMonitorRecHit/data/SiPixelMonitorRecHit.cfi
 elif [ "$source_type" == "all" ]; then
   cp sipixel_monitorelement_config_all.xml sipixel_monitorelement_config.xml
   cp sipixel_qualitytest_config_all.xml    sipixel_qualitytest_config.xml

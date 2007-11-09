@@ -1,5 +1,5 @@
 <TESTSCONFIGURATION> 
-<QTEST name="MeanWithinExpected:xResidualRange" activate="true"> 
+<QTEST name="MeanWithinExpected:-1-1" activate="true"> 
      <TYPE>MeanWithinExpected</TYPE> 
      <PARAM name="error">0.75</PARAM> 
      <PARAM name="warning">0.90</PARAM> 

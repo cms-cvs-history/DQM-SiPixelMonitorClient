@@ -32,6 +32,7 @@
 #include <qregexp.h>
 
 #include <iostream>
+#include <math.h>
 
 #include <cstdlib> // for free() - Root can allocate with malloc() - sigh...
  

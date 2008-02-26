@@ -47,6 +47,8 @@
      <MonElement name="ScurveSigmasSummary_mean">    </MonElement> 
      <MonElement name="ScurveThresholdSummary_RMS">  </MonElement> 
      <MonElement name="ScurveThresholdSummary_mean"> </MonElement> 
+     <MonElement name="pixelAliveSummary_mean">      </MonElement> 
+     <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </TkMap>
 <SummaryPlot>
 <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 
@@ -87,6 +89,7 @@
      <MonElement name="ScurveFitResultSummary">  </MonElement> 
      <MonElement name="ScurveSigmasSummary">     </MonElement> 
      <MonElement name="ScurveThresholdSummary">  </MonElement> 
+     <MonElement name="pixelAliveSummary">       </MonElement> 
 </SubStructureBarrelLevel> 
 <SubStructureGrandBarrelLevel name="Layer_" update_frequency="300"> 
      <MonElement name="errorType">	</MonElement> 
@@ -136,6 +139,8 @@
      <MonElement name="ScurveSigmasSummary_mean">    </MonElement> 
      <MonElement name="ScurveThresholdSummary_RMS">  </MonElement> 
      <MonElement name="ScurveThresholdSummary_mean"> </MonElement> 
+     <MonElement name="pixelAliveSummary_mean">      </MonElement> 
+     <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </SubStructureGrandBarrelLevel> 
 <SubStructureEndcapLevel name="Panel_" update_frequency="300"> 
      <MonElement name="ndigis">    	</MonElement> 
@@ -163,6 +168,7 @@
      <MonElement name="ScurveFitResultSummary">  </MonElement> 
      <MonElement name="ScurveSigmasSummary">     </MonElement> 
      <MonElement name="ScurveThresholdSummary">  </MonElement> 
+     <MonElement name="pixelAliveSummary">       </MonElement> 
 </SubStructureEndcapLevel> 
 <SubStructureGrandEndcapLevel name="Blade_" update_frequency="300"> 
      <MonElement name="errorType">	</MonElement> 
@@ -212,6 +218,8 @@
      <MonElement name="ScurveSigmasSummary_mean">    </MonElement> 
      <MonElement name="ScurveThresholdSummary_RMS">  </MonElement> 
      <MonElement name="ScurveThresholdSummary_mean"> </MonElement> 
+     <MonElement name="pixelAliveSummary_mean">      </MonElement> 
+     <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </SubStructureGrandEndcapLevel> 
 </SummaryPlot>
 

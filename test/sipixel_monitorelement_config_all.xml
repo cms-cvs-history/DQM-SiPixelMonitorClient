@@ -143,6 +143,18 @@
      <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </SubStructureGrandBarrelLevel> 
 <SubStructureEndcapLevel name="Panel_" update_frequency="300"> 
+     <MonElement name="errorType">	</MonElement> 
+     <MonElement name="NErrors">	</MonElement> 
+     <MonElement name="fullType">	</MonElement> 
+     <MonElement name="chanNmbr">	</MonElement> 
+     <MonElement name="TBMType">	</MonElement> 
+     <MonElement name="EvtNbr">		</MonElement> 
+     <MonElement name="evtSize">	</MonElement> 
+     <MonElement name="linkId">		</MonElement> 
+     <MonElement name="ROCId">		</MonElement> 
+     <MonElement name="DCOLId">		</MonElement> 
+     <MonElement name="PXId">		</MonElement> 
+     <MonElement name="ROCNmbr">	</MonElement> 
      <MonElement name="ndigis">    	</MonElement> 
      <MonElement name="adc">       	</MonElement> 
      <MonElement name="nclusters"> 	</MonElement>

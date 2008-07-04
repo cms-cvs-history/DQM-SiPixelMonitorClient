@@ -1,5 +1,14 @@
 <MonElementConfiguration> 
 <TkMap name="Summary Map" update_frequency="200">
+     <MonElement name="errorType"></MonElement> 
+     <MonElement name="NErrors"></MonElement> 
+     <MonElement name="TBMType"></MonElement> 
+     <MonElement name="EvtNbr"></MonElement> 
+     <MonElement name="ROCId"></MonElement> 
+     <MonElement name="DCOLId"></MonElement> 
+     <MonElement name="PXId"></MonElement> 
+     <MonElement name="ROCNmbr"></MonElement> 
+     <MonElement name="TBMMessage"></MonElement> 
 </TkMap>
 <SummaryPlot>
 <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 

@@ -1,5 +1,7 @@
 <MonElementConfiguration> 
    <TkMap name="Summary Map" update_frequency="200">
+           <MonElement name="ClustX"></MonElement>
+           <MonElement name="ClustY"></MonElement>
    </TkMap>
    <SummaryPlot>
       <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 

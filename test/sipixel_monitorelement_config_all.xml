@@ -29,8 +29,8 @@
      <MonElement name="residualY_RMS">  </MonElement>
      <MonElement name="residualX_mean"> </MonElement>
      <MonElement name="residualY_mean"> </MonElement>
-     <MonElement name="ClusX">          </MonElement>
-     <MonElement name="ClusY">          </MonElement>
+     <MonElement name="ClustX">          </MonElement>
+     <MonElement name="ClustY">          </MonElement>
      <MonElement name="Gain1d_RMS">	             </MonElement> 
      <MonElement name="Gain1d_mean">	             </MonElement> 
      <MonElement name="GainChi2NDF1d_RMS">	     </MonElement> 
@@ -79,8 +79,8 @@
      <MonElement name="maxcol">    	</MonElement>
      <MonElement name="residualX"> 	</MonElement>
      <MonElement name="residualY"> 	</MonElement>
-     <MonElement name="ClusX">          </MonElement>
-     <MonElement name="ClusY">          </MonElement>
+     <MonElement name="ClustX">          </MonElement>
+     <MonElement name="ClustY">          </MonElement>
      <MonElement name="Gain1d">	                 </MonElement> 
      <MonElement name="GainChi2NDF1d">	         </MonElement> 
      <MonElement name="GainChi2Prob1d">	         </MonElement> 
@@ -121,8 +121,8 @@
      <MonElement name="residualY_RMS">  </MonElement>
      <MonElement name="residualX_mean"> </MonElement>
      <MonElement name="residualY_mean"> </MonElement>
-     <MonElement name="ClusX">          </MonElement>
-     <MonElement name="ClusY">          </MonElement>
+     <MonElement name="ClustX">          </MonElement>
+     <MonElement name="ClustY">          </MonElement>
      <MonElement name="Gain1d_RMS">	             </MonElement> 
      <MonElement name="Gain1d_mean">	             </MonElement> 
      <MonElement name="GainChi2NDF1d_RMS">	     </MonElement> 
@@ -170,8 +170,8 @@
      <MonElement name="maxcol">    	</MonElement>
      <MonElement name="residualX"> 	</MonElement>
      <MonElement name="residualY"> 	</MonElement>
-     <MonElement name="ClusX">          </MonElement>
-     <MonElement name="ClusY">          </MonElement>
+     <MonElement name="ClustX">          </MonElement>
+     <MonElement name="ClustY">          </MonElement>
      <MonElement name="Gain1d">	                 </MonElement> 
      <MonElement name="GainChi2NDF1d">	         </MonElement> 
      <MonElement name="GainChi2Prob1d">	         </MonElement> 
@@ -212,8 +212,8 @@
      <MonElement name="residualY_RMS">  </MonElement>
      <MonElement name="residualX_mean"> </MonElement>
      <MonElement name="residualY_mean"> </MonElement>
-     <MonElement name="ClusX">          </MonElement>
-     <MonElement name="ClusY">          </MonElement>
+     <MonElement name="ClustX">          </MonElement>
+     <MonElement name="ClustY">          </MonElement>
      <MonElement name="Gain1d_RMS">	             </MonElement> 
      <MonElement name="Gain1d_mean">	             </MonElement> 
      <MonElement name="GainChi2NDF1d_RMS">	     </MonElement> 

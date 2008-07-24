@@ -1,0 +1,65 @@
+<MonElementConfiguration> 
+<TkMap name="Summary Map" update_frequency="200">
+     RAWDATA
+     DIGIS
+     CLUSTERS
+     GRANDTRACKS
+     RECHITS
+     GRANDGAIN
+     GRANDSCURVE
+     GRANDPIXEL
+</TkMap>
+<SummaryPlot>
+<SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 
+     RAWDATA
+     DIGIS
+     CLUSTERS
+     REGTRACKS
+     RECHITS
+     REGGAIN
+     REGSCURVE
+     REGPIXEL
+</SubStructureBarrelLevel> 
+<SubStructureGrandBarrelLevel name="Layer_" update_frequency="300"> 
+     RAWDATA
+     DIGIS
+     CLUSTERS
+     GRANDTRACKS
+     RECHITS
+     GRANDGAIN
+     GRANDSCURVE
+     GRANDPIXEL
+</SubStructureGrandBarrelLevel> 
+<SubStructureEndcapLevel name="Panel_" update_frequency="300"> 
+     RAWDATA
+     DIGIS
+     CLUSTERS
+     REGTRACKS
+     RECHITS
+     REGGAIN
+     REGSCURVE
+     REGPIXEL
+</SubStructureEndcapLevel> 
+<SubStructureGrandEndcapLevel name="Blade_" update_frequency="300"> 
+     RAWDATA
+     DIGIS
+     CLUSTERS
+     GRANDTRACKS
+     RECHITS
+     GRANDGAIN
+     GRANDSCURVE
+     GRANDPIXEL
+</SubStructureGrandEndcapLevel> 
+</SummaryPlot>
+
+<QTests>
+<QTestMessageLimit name="limit" value="100">
+</QTestMessageLimit>
+</QTests>
+
+<Source>
+<SourceType name="source" code="5">
+</SourceType>
+</Source>
+
+</MonElementConfiguration> 

@@ -248,7 +248,7 @@
 
 
 <QTests>
-<QTestMessageLimit name="limit" value="100">
+<QTestMessageLimit name="limit" value="0">
 </QTestMessageLimit>
 </QTests>
 

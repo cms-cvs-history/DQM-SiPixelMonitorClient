@@ -73,4 +73,9 @@
 </SourceType>
 </Source>
 
+<Calib>
+<CalibType name="use" value="CALIBUSE">
+</CalibType>
+</Calib>
+
 </MonElementConfiguration> 

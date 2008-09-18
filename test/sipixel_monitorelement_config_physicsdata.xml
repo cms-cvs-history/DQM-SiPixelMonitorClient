@@ -67,7 +67,8 @@
      <MonElement name="DCOLId">		</MonElement> 
      <MonElement name="PXId">		</MonElement> 
      <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
+     <MonElement name="ndigis">         </MonElement>
+     <MonElement name="ndigisFREQ"></MonElement>  
      <MonElement name="adc">            </MonElement> 
      <MonElement name="nclusters"></MonElement>
      <MonElement name="y">	</MonElement>
@@ -121,7 +122,8 @@
      <MonElement name="DCOLId">		</MonElement> 
      <MonElement name="PXId">		</MonElement> 
      <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
+     <MonElement name="ndigis">         </MonElement>
+     <MonElement name="ndigisFREQ"></MonElement>  
      <MonElement name="adc">            </MonElement> 
      <MonElement name="nclusters"></MonElement>
      <MonElement name="y">	</MonElement>

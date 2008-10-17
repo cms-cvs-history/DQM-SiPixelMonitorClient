@@ -25,6 +25,9 @@
      <MonElement name="maxrow"> </MonElement>
      <MonElement name="mincol"> </MonElement>
      <MonElement name="maxcol"> </MonElement>
+     <MonElement name="ClustX"></MonElement>
+     <MonElement name="ClustY"></MonElement>
+     <MonElement name="nRecHits"></MonElement>
      <MonElement name="residualX_mean"> </MonElement>
      <MonElement name="residualX_RMS"> </MonElement>
      <MonElement name="residualY_mean"> </MonElement>
@@ -57,6 +60,9 @@
      <MonElement name="maxrow"> </MonElement>
      <MonElement name="mincol"> </MonElement>
      <MonElement name="maxcol"> </MonElement>
+     <MonElement name="ClustX"></MonElement>
+     <MonElement name="ClustY"></MonElement>
+     <MonElement name="nRecHits"></MonElement>
      <MonElement name="residualX"> </MonElement>
      <MonElement name="residualY"> </MonElement>
 </SubStructureBarrelLevel> 
@@ -76,6 +82,7 @@
      <MonElement name="ndigis">         </MonElement>
      <MonElement name="ndigisFREQ"></MonElement>  
      <MonElement name="adc">            </MonElement> 
+     <MonElement name="adcCOMB"> </MonElement>
      <MonElement name="nclusters"></MonElement>
      <MonElement name="y">	</MonElement>
      <MonElement name="x">	</MonElement>
@@ -87,6 +94,9 @@
      <MonElement name="maxrow"> </MonElement>
      <MonElement name="mincol"> </MonElement>
      <MonElement name="maxcol"> </MonElement>
+     <MonElement name="ClustX"></MonElement>
+     <MonElement name="ClustY"></MonElement>
+     <MonElement name="nRecHits"></MonElement>
      <MonElement name="residualX_mean"> </MonElement>
      <MonElement name="residualX_RMS"> </MonElement>
      <MonElement name="residualY_mean"> </MonElement>
@@ -118,6 +128,9 @@
      <MonElement name="maxrow"> </MonElement>
      <MonElement name="mincol"> </MonElement>
      <MonElement name="maxcol"> </MonElement>
+     <MonElement name="ClustX"></MonElement>
+     <MonElement name="ClustY"></MonElement>
+     <MonElement name="nRecHits"></MonElement>
      <MonElement name="residualX"> </MonElement>
      <MonElement name="residualY"> </MonElement>
 </SubStructureEndcapLevel> 
@@ -137,6 +150,7 @@
      <MonElement name="ndigis">         </MonElement>
      <MonElement name="ndigisFREQ"></MonElement>  
      <MonElement name="adc">            </MonElement> 
+     <MonElement name="adcCOMB"> </MonElement>
      <MonElement name="nclusters"></MonElement>
      <MonElement name="y">	</MonElement>
      <MonElement name="x">	</MonElement>
@@ -148,6 +162,9 @@
      <MonElement name="maxrow"> </MonElement>
      <MonElement name="mincol"> </MonElement>
      <MonElement name="maxcol"> </MonElement>
+     <MonElement name="ClustX"></MonElement>
+     <MonElement name="ClustY"></MonElement>
+     <MonElement name="nRecHits"></MonElement>
      <MonElement name="residualX_mean"> </MonElement>
      <MonElement name="residualX_RMS"> </MonElement>
      <MonElement name="residualY_mean"> </MonElement>

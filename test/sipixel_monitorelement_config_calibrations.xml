@@ -1,19 +1,5 @@
 <MonElementConfiguration> 
 <TkMap name="Summary Map" update_frequency="200">
-     <MonElement name="errorType">	</MonElement> 
-     <MonElement name="NErrors">	</MonElement> 
-     <MonElement name="fullType">	</MonElement> 
-     <MonElement name="chanNmbr">	</MonElement> 
-     <MonElement name="TBMType">	</MonElement> 
-     <MonElement name="EvtNbr">		</MonElement> 
-     <MonElement name="evtSize">	</MonElement> 
-     <MonElement name="linkId">		</MonElement> 
-     <MonElement name="ROCId">		</MonElement> 
-     <MonElement name="DCOLId">		</MonElement> 
-     <MonElement name="PXId">		</MonElement> 
-     <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
-     <MonElement name="adc">            </MonElement> 
      <MonElement name="Gain1d_RMS">	             </MonElement> 
      <MonElement name="Gain1d_mean">	             </MonElement> 
      <MonElement name="GainChi2NDF1d_RMS">	     </MonElement> 
@@ -35,34 +21,12 @@
      <MonElement name="GainDynamicRange2d_mean">        </MonElement> 	      
      <MonElement name="GainSaturate2d_RMS">     </MonElement> 	  	     
      <MonElement name="GainSaturate2d_mean">    </MonElement> 	  	      
-     <MonElement name="SiPixelErrorsCalibDigis">        </MonElement>
-     <MonElement name="ScurveChi2ProbSummary_RMS">    </MonElement> 
-     <MonElement name="ScurveChi2ProbSummary_mean">   </MonElement> 
-     <MonElement name="ScurveFitResultSummary_RMS">  </MonElement> 
-     <MonElement name="ScurveFitResultSummary_mean"> </MonElement> 
-     <MonElement name="ScurveSigmasSummary_RMS">     </MonElement> 
-     <MonElement name="ScurveSigmasSummary_mean">    </MonElement> 
-     <MonElement name="ScurveThresholdSummary_RMS">  </MonElement> 
-     <MonElement name="ScurveThresholdSummary_mean"> </MonElement> 
      <MonElement name="pixelAliveSummary_mean">      </MonElement> 
      <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </TkMap>
 <SummaryPlot>
 <SubStructureBarrelLevel name="Ladder_" update_frequency="300"> 
-     <MonElement name="errorType">	</MonElement> 
-     <MonElement name="NErrors">	</MonElement> 
-     <MonElement name="fullType">	</MonElement> 
-     <MonElement name="chanNmbr">	</MonElement> 
-     <MonElement name="TBMType">	</MonElement> 
-     <MonElement name="EvtNbr">		</MonElement> 
-     <MonElement name="evtSize">	</MonElement> 
-     <MonElement name="linkId">		</MonElement> 
-     <MonElement name="ROCId">		</MonElement> 
-     <MonElement name="DCOLId">		</MonElement> 
-     <MonElement name="PXId">		</MonElement> 
-     <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
-     <MonElement name="adc">            </MonElement> 
+ 
      <MonElement name="Gain1d">	                 </MonElement> 
      <MonElement name="GainChi2NDF1d">	         </MonElement> 
      <MonElement name="GainChi2Prob1d">	         </MonElement> 
@@ -74,28 +38,9 @@
      <MonElement name="GainFitResult2d">        </MonElement>
      <MonElement name="GainDynamicRange2d"> </MonElement>
      <MonElement name="GainSaturate2d">     </MonElement> 	  	     
-     <MonElement name="SiPixelErrorsCalibDigis">        </MonElement> 
-     <MonElement name="ScurveChi2ProbSummary">    </MonElement> 
-     <MonElement name="ScurveFitResultSummary">  </MonElement> 
-     <MonElement name="ScurveSigmasSummary">     </MonElement> 
-     <MonElement name="ScurveThresholdSummary">  </MonElement> 
      <MonElement name="pixelAliveSummary">       </MonElement> 
 </SubStructureBarrelLevel> 
 <SubStructureGrandBarrelLevel name="Layer_" update_frequency="300"> 
-     <MonElement name="errorType">	</MonElement> 
-     <MonElement name="NErrors">	</MonElement> 
-     <MonElement name="fullType">	</MonElement> 
-     <MonElement name="chanNmbr">	</MonElement> 
-     <MonElement name="TBMType">	</MonElement> 
-     <MonElement name="EvtNbr">		</MonElement> 
-     <MonElement name="evtSize">	</MonElement> 
-     <MonElement name="linkId">		</MonElement> 
-     <MonElement name="ROCId">		</MonElement> 
-     <MonElement name="DCOLId">		</MonElement> 
-     <MonElement name="PXId">		</MonElement> 
-     <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
-     <MonElement name="adc">            </MonElement> 
      <MonElement name="Gain1d_RMS">	             </MonElement> 
      <MonElement name="Gain1d_mean">	             </MonElement> 
      <MonElement name="GainChi2NDF1d_RMS">	     </MonElement> 
@@ -117,33 +62,10 @@
      <MonElement name="GainDynamicRange2d_mean">        </MonElement> 	      
      <MonElement name="GainSaturate2d_RMS">     </MonElement> 	  	     
      <MonElement name="GainSaturate2d_mean">    </MonElement> 	  	      
-     <MonElement name="SiPixelErrorsCalibDigis">        </MonElement>
-     <MonElement name="ScurveChi2ProbSummary_RMS">    </MonElement> 
-     <MonElement name="ScurveChi2ProbSummary_mean">   </MonElement> 
-     <MonElement name="ScurveFitResultSummary_RMS">  </MonElement> 
-     <MonElement name="ScurveFitResultSummary_mean"> </MonElement> 
-     <MonElement name="ScurveSigmasSummary_RMS">     </MonElement> 
-     <MonElement name="ScurveSigmasSummary_mean">    </MonElement> 
-     <MonElement name="ScurveThresholdSummary_RMS">  </MonElement> 
-     <MonElement name="ScurveThresholdSummary_mean"> </MonElement> 
      <MonElement name="pixelAliveSummary_mean">      </MonElement> 
      <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </SubStructureGrandBarrelLevel> 
 <SubStructureEndcapLevel name="Panel_" update_frequency="300"> 
-     <MonElement name="errorType">	</MonElement> 
-     <MonElement name="NErrors">	</MonElement> 
-     <MonElement name="fullType">	</MonElement> 
-     <MonElement name="chanNmbr">	</MonElement> 
-     <MonElement name="TBMType">	</MonElement> 
-     <MonElement name="EvtNbr">		</MonElement> 
-     <MonElement name="evtSize">	</MonElement> 
-     <MonElement name="linkId">		</MonElement> 
-     <MonElement name="ROCId">		</MonElement> 
-     <MonElement name="DCOLId">		</MonElement> 
-     <MonElement name="PXId">		</MonElement> 
-     <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
-     <MonElement name="adc">            </MonElement> 
      <MonElement name="Gain1d">	                 </MonElement> 
      <MonElement name="GainChi2NDF1d">	         </MonElement> 
      <MonElement name="GainChi2Prob1d">	         </MonElement> 
@@ -155,28 +77,9 @@
      <MonElement name="GainFitResult2d">        </MonElement>
      <MonElement name="GainDynamicRange2d"> </MonElement>
      <MonElement name="GainSaturate2d">     </MonElement> 	  	     
-     <MonElement name="SiPixelErrorsCalibDigis">        </MonElement>
-     <MonElement name="ScurveChi2ProbSummary">    </MonElement> 
-     <MonElement name="ScurveFitResultSummary">  </MonElement> 
-     <MonElement name="ScurveSigmasSummary">     </MonElement> 
-     <MonElement name="ScurveThresholdSummary">  </MonElement> 
      <MonElement name="pixelAliveSummary">       </MonElement> 
 </SubStructureEndcapLevel> 
 <SubStructureGrandEndcapLevel name="Blade_" update_frequency="300"> 
-     <MonElement name="errorType">	</MonElement> 
-     <MonElement name="NErrors">	</MonElement> 
-     <MonElement name="fullType">	</MonElement> 
-     <MonElement name="chanNmbr">	</MonElement> 
-     <MonElement name="TBMType">	</MonElement> 
-     <MonElement name="EvtNbr">		</MonElement> 
-     <MonElement name="evtSize">	</MonElement> 
-     <MonElement name="linkId">		</MonElement> 
-     <MonElement name="ROCId">		</MonElement> 
-     <MonElement name="DCOLId">		</MonElement> 
-     <MonElement name="PXId">		</MonElement> 
-     <MonElement name="ROCNmbr">	</MonElement> 
-     <MonElement name="ndigis">         </MonElement> 
-     <MonElement name="adc">            </MonElement> 
      <MonElement name="Gain1d_RMS">	             </MonElement> 
      <MonElement name="Gain1d_mean">	             </MonElement> 
      <MonElement name="GainChi2NDF1d_RMS">	     </MonElement> 
@@ -198,15 +101,6 @@
      <MonElement name="GainDynamicRange2d_mean">        </MonElement> 	      
      <MonElement name="GainSaturate2d_RMS">     </MonElement> 	  	     
      <MonElement name="GainSaturate2d_mean">    </MonElement> 	  	      
-     <MonElement name="SiPixelErrorsCalibDigis">        </MonElement>
-     <MonElement name="ScurveChi2ProbSummary_RMS">    </MonElement> 
-     <MonElement name="ScurveChi2ProbSummary_mean">   </MonElement> 
-     <MonElement name="ScurveFitResultSummary_RMS">  </MonElement> 
-     <MonElement name="ScurveFitResultSummary_mean"> </MonElement> 
-     <MonElement name="ScurveSigmasSummary_RMS">     </MonElement> 
-     <MonElement name="ScurveSigmasSummary_mean">    </MonElement> 
-     <MonElement name="ScurveThresholdSummary_RMS">  </MonElement> 
-     <MonElement name="ScurveThresholdSummary_mean"> </MonElement> 
      <MonElement name="pixelAliveSummary_mean">      </MonElement> 
      <MonElement name="pixelAliveSummary_FracOfPerfectPix"></MonElement> 
 </SubStructureGrandEndcapLevel> 

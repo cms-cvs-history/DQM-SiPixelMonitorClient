@@ -1973,14 +1973,10 @@ void SiPixelInformationExtractor::findNoisyPixels(DQMStore * bei, bool init, flo
         loc.dcol = cabling.dcol;
         loc.pxid = cabling.pxid;
 
-	// FIX to adhere to new cabling map. To be replaced with CalibTracker/SiPixelTools detid - > hardware id classes ASAP.
-	//        const sipixelobjects::PixelFEDCabling *theFed= theCablingMap.product()->fed(realfedID);
-	//        const sipixelobjects::PixelFEDLink * link = theFed->link(cabling.link);
-	//        const sipixelobjects::PixelROC *theRoc = link->roc(cabling.roc);
+        const sipixelobjects::PixelFEDCabling *theFed= theCablingMap.product()->fed(realfedID);
+        const sipixelobjects::PixelFEDLink * link = theFed->link(cabling.link);
+        const sipixelobjects::PixelROC *theRoc = link->roc(cabling.roc);
         sipixelobjects::LocalPixel locpixel(loc);
-	sipixelobjects::CablingPathToDetUnit path = {realfedID, cabling.link, cabling.roc};  
-	const sipixelobjects::PixelROC *theRoc = theCablingMap->findItem(path);
-	// END of FIX
 	
         int onlineColumn = locpixel.rocCol();
         int onlineRow= locpixel.rocRow();

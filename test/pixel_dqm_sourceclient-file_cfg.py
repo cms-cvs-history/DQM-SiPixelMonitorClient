@@ -1,14 +1,12 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("SIPIXELDQM")
-#process.load("Geometry.TrackerSimData.trackerSimGeometryXML_cfi")
-#process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
-#process.load("Geometry.TrackerNumberingBuilder.trackerNumberingGeometry_cfi")
-process.load("Configuration.StandardSequences.Geometry_cff")
-process.load("Configuration.StandardSequences.MagneticField_38T_cff")
+process.load("Geometry.TrackerSimData.trackerSimGeometryXML_cfi")
+process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
+process.load("Geometry.TrackerNumberingBuilder.trackerNumberingGeometry_cfi")
+#process.load("Configuration.StandardSequences.Geometry_cff")
+process.load("Configuration.StandardSequences.MagneticField_cff")
 #process.load("Configuration.GlobalRuns.ForceZeroTeslaField_cff")
-
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
 
 ##process.load("Configuration.StandardSequences.Reconstruction_cff")
 
@@ -46,27 +44,27 @@ process.SiPixelRawDataErrorSource.saveFile = False
 process.SiPixelRawDataErrorSource.isPIB = False
 process.SiPixelRawDataErrorSource.slowDown = False
 process.SiPixelRawDataErrorSource.reducedSet = False
-process.SiPixelRawDataErrorSource.modOn = True
-process.SiPixelRawDataErrorSource.ladOn = False
-process.SiPixelRawDataErrorSource.layOn = False
-process.SiPixelRawDataErrorSource.phiOn = False
-process.SiPixelRawDataErrorSource.bladeOn = False
-process.SiPixelRawDataErrorSource.diskOn = False
-process.SiPixelRawDataErrorSource.ringOn = False
+process.SiPixelRawDataErrorSource.modOn = False
+process.SiPixelRawDataErrorSource.ladOn = True
+process.SiPixelRawDataErrorSource.layOn = True
+process.SiPixelRawDataErrorSource.phiOn = True
+process.SiPixelRawDataErrorSource.bladeOn = True
+process.SiPixelRawDataErrorSource.diskOn = True
+process.SiPixelRawDataErrorSource.ringOn = True
 
 process.load("DQM.SiPixelMonitorDigi.SiPixelMonitorDigi_cfi")
 process.SiPixelDigiSource.saveFile = False
 process.SiPixelDigiSource.isPIB = False
 process.SiPixelDigiSource.slowDown = False
-process.SiPixelDigiSource.modOn = True
-process.SiPixelDigiSource.twoDimOn = True
-process.SiPixelDigiSource.hiRes = True
-process.SiPixelDigiSource.ladOn = False
-process.SiPixelDigiSource.layOn = False
-process.SiPixelDigiSource.phiOn = False
-process.SiPixelDigiSource.bladeOn = False
-process.SiPixelDigiSource.diskOn = False
-process.SiPixelDigiSource.ringOn = False
+process.SiPixelDigiSource.modOn = False
+process.SiPixelDigiSource.twoDimOn = False
+process.SiPixelDigiSource.hiRes = False
+process.SiPixelDigiSource.ladOn = True
+process.SiPixelDigiSource.layOn = True
+process.SiPixelDigiSource.phiOn = True
+process.SiPixelDigiSource.bladeOn = True
+process.SiPixelDigiSource.diskOn = True
+process.SiPixelDigiSource.ringOn = True
 
 process.load("DQM.SiPixelMonitorCluster.SiPixelMonitorCluster_cfi")
 process.SiPixelClusterSource.saveFile = False
@@ -106,8 +104,8 @@ process.load("DQMServices.Components.DQMEnvironment_cfi")
 
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 #process.GlobalTag.connect ="sqlite_file:/afs/cern.ch/user/m/malgeri/public/globtag/CRZT210_V1.db"
-#process.GlobalTag.connect = "frontier://FrontierProd/CMS_COND_21X_GLOBALTAG"
-process.GlobalTag.globaltag = "CRAFT_30X::All"
+process.GlobalTag.connect = "frontier://FrontierProd/CMS_COND_21X_GLOBALTAG"
+process.GlobalTag.globaltag = "CRAFT_V2P::All"
 process.es_prefer_GlobalTag = cms.ESPrefer('PoolDBESSource','GlobalTag')
 
 process.source = cms.Source("PoolSource",
@@ -146,9 +144,7 @@ process.source = cms.Source("PoolSource",
         #'/store/data/Commissioning08/Cosmics/RAW/v1/000/065/935/261D55FE-6899-DD11-99F6-000423D9989E.root',
         #'/store/data/Commissioning08/Cosmics/RAW/v1/000/065/935/3C29146C-6A99-DD11-BE42-000423D999CA.root'
 	
-        #'/store/data/Commissioning08/Cosmics/RAW/v1/000/066/668/ECBAB6B1-519C-DD11-BBB5-000423D94E70.root'
-        
-	'/store/data/Commissioning08/Cosmics/RAW/v1/000/067/838/006945C8-40A5-DD11-BD7E-001617DBD556.root'
+        '/store/data/Commissioning08/Cosmics/RAW/v1/000/066/668/ECBAB6B1-519C-DD11-BBB5-000423D94E70.root'
 	
 	)
 )
@@ -178,18 +174,15 @@ process.sipixelEDAClient = cms.EDFilter("SiPixelEDAClient",
     HighResolutionOccupancy = cms.untracked.bool(True),
     NoiseRateCutValue = cms.untracked.double(-1), #negative value means test is not run; default cut value is 0.001
     NEventsForNoiseCalculation = cms.untracked.int32(1000),
-    UseOfflineXMLFile = cms.untracked.bool(False),
-    Tier0Flag = cms.untracked.bool(False)
+    UseOfflineXMLFile = cms.untracked.bool(True),
+    Tier0Flag = cms.untracked.bool(True)
 )
 
-process.sipixelDaqInfo = cms.EDFilter("SiPixelDaqInfo")
-
-#process.qTester = cms.EDFilter("QualityTester",
-#    qtList = cms.untracked.FileInPath('DQM/SiPixelMonitorClient/test/sipixel_qualitytest_config.xml'),
-#    QualityTestPrescaler = cms.untracked.int32(1),
-#    getQualityTestsFromFile = cms.untracked.bool(True),
-#    verboseQT = cms.untracked.bool(False)
-#)
+process.qTester = cms.EDFilter("QualityTester",
+    qtList = cms.untracked.FileInPath('DQM/SiPixelMonitorClient/test/sipixel_qualitytest_config.xml'),
+    QualityTestPrescaler = cms.untracked.int32(1),
+    getQualityTestsFromFile = cms.untracked.bool(True)
+)
 
 process.ModuleWebRegistry = cms.Service("ModuleWebRegistry")
 
@@ -203,9 +196,8 @@ process.RAWmonitor = cms.Sequence(process.SiPixelRawDataErrorSource)
 process.DIGImonitor = cms.Sequence(process.SiPixelDigiSource)
 process.CLUmonitor = cms.Sequence(process.SiPixelClusterSource)
 process.HITmonitor = cms.Sequence(process.SiPixelRecHitSource)
-#process.DQMmodules = cms.Sequence(process.qTester*process.dqmEnv*process.dqmSaver)
-process.p = cms.Path(process.Reco*process.dqmEnv*process.RAWmonitor*process.DIGImonitor*process.CLUmonitor*process.sipixelEDAClient*process.dqmSaver)
-#process.p = cms.Path(process.Reco*process.dqmEnv*process.RAWmonitor*process.DIGImonitor*process.sipixelEDAClient*sipixelDaqInfo*process.dqmSaver)
+process.DQMmodules = cms.Sequence(process.qTester*process.dqmEnv*process.dqmSaver)
+process.p = cms.Path(process.Reco*process.dqmEnv*process.RAWmonitor*process.DIGImonitor*process.sipixelEDAClient*process.dqmSaver)
 #process.p = cms.Path(process.Reco*process.DQMmodules*process.RAWmonitor*process.DIGImonitor*process.CLUmonitor*process.HITmonitor*process.sipixelEDAClient)
 #process.p = cms.Path(process.DQMmodules*process.DIGImonitor*process.sipixelEDAClient)
 process.DQM.collectorHost = ''

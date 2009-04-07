@@ -13,7 +13,7 @@
 
 #include "DQMServices/Core/interface/DQMStore.h"
 #include "DQMServices/Core/interface/MonitorElement.h"
-#include "DQMServices/WebComponents/interface/CgiReader.h"
+#include "DQM/TrackerCommon/interface/CgiReader.h"
 
 #include "FWCore/ParameterSet/interface/FileInPath.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
@@ -72,7 +72,6 @@ SiPixelInformationExtractor::SiPixelInformationExtractor(bool offlineXMLfile) : 
   edm::LogInfo("SiPixelInformationExtractor") << 
     " Creating SiPixelInformationExtractor " << "\n" ;
   
-  canvas_ = new TCanvas("PlotCanvas", "Plot Canvas"); 
   readReference_ = false;
   allMods_=0;
   errorMods_=0;
@@ -89,7 +88,6 @@ SiPixelInformationExtractor::~SiPixelInformationExtractor() {
   edm::LogInfo("SiPixelInformationExtractor") << 
     " Deleting SiPixelInformationExtractor " << "\n" ;
   
-  if (canvas_) delete canvas_;
   if (histoPlotter_) delete histoPlotter_;
 }
 
@@ -1604,7 +1602,7 @@ void SiPixelInformationExtractor::fillGlobalQualityPlot(DQMStore * bei, bool ini
     //cout<<"Number of FEDs in the readout: "<<nFEDs<<endl;
     if(nFEDs==0){
       SummaryReportMap = bei->get("Pixel/EventInfo/reportSummaryMap");
-      if(SummaryReportMap) for(int i=1; i!=41; i++) for(int j=1; j!=37; j++) SummaryReportMap->setBinContent(i,j,0.);
+      if(SummaryReportMap) for(int i=1; i!=41; i++) for(int j=1; j!=37; j++) SummaryReportMap->setBinContent(i,j,-1.);
     }
     init=false;
   }
@@ -1786,7 +1784,7 @@ void SiPixelInformationExtractor::fillGlobalQualityPlot(DQMStore * bei, bool ini
           if(allmodsMap->GetBinContent(i,j)>0){
 	    contents = (goodmodsMap->GetBinContent(i,j))/(allmodsMap->GetBinContent(i,j));
           }else{
-            contents = 0.;
+            contents = -1.;
           }
           //cout<<"\t\t MAP: "<<i<<","<<j<<","<<contents<<endl;
           SummaryReportMap->setBinContent(i,j,contents);
@@ -1800,7 +1798,7 @@ void SiPixelInformationExtractor::fillGlobalQualityPlot(DQMStore * bei, bool ini
           if(allmodsMap->GetBinContent(i,j)>0){
 	    contents = (goodmodsMap->GetBinContent(i,j))/(allmodsMap->GetBinContent(i,j));
           }else{
-            contents = 0.;
+            contents = -1.;
           }
           //cout<<"\t\t MAP: "<<i<<","<<j<<","<<contents<<endl;
           SummaryReportMap->setBinContent(i,j,contents);
@@ -1975,14 +1973,10 @@ void SiPixelInformationExtractor::findNoisyPixels(DQMStore * bei, bool init, flo
         loc.dcol = cabling.dcol;
         loc.pxid = cabling.pxid;
 
-	// FIX to adhere to new cabling map. To be replaced with CalibTracker/SiPixelTools detid - > hardware id classes ASAP.
-	//        const sipixelobjects::PixelFEDCabling *theFed= theCablingMap.product()->fed(realfedID);
-	//        const sipixelobjects::PixelFEDLink * link = theFed->link(cabling.link);
-	//        const sipixelobjects::PixelROC *theRoc = link->roc(cabling.roc);
+        const sipixelobjects::PixelFEDCabling *theFed= theCablingMap.product()->fed(realfedID);
+        const sipixelobjects::PixelFEDLink * link = theFed->link(cabling.link);
+        const sipixelobjects::PixelROC *theRoc = link->roc(cabling.roc);
         sipixelobjects::LocalPixel locpixel(loc);
-	sipixelobjects::CablingPathToDetUnit path = {realfedID, cabling.link, cabling.roc};  
-	const sipixelobjects::PixelROC *theRoc = theCablingMap->findItem(path);
-	// END of FIX
 	
         int onlineColumn = locpixel.rocCol();
         int onlineRow= locpixel.rocRow();
